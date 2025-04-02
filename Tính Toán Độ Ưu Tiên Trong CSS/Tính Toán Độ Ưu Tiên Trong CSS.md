@@ -1,3 +1,5 @@
+**Author:** Nguyễn Minh Vũ
+
 # Tính Toán Độ Ưu Tiên (Specificity) Trong CSS
 
 ## 1. Độ Ưu Tiên Trong CSS Là Gì?

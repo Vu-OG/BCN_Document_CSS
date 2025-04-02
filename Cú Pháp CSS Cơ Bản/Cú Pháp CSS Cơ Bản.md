@@ -1,3 +1,5 @@
+**Author:** Nguyễn Minh Vũ
+
 # Cú Pháp CSS Cơ Bản
 
 ## 1. Giới Thiệu
