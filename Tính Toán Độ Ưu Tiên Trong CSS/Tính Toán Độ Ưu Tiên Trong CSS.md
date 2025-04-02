@@ -1,58 +1,61 @@
 # Tính Toán Độ Ưu Tiên (Specificity) Trong CSS
 
-## 1. Giới thiệu về Specificity
-Specificity (độ ưu tiên) trong CSS là một thuật toán xác định quy tắc CSS nào sẽ được áp dụng cho một phần tử khi có nhiều quy tắc cùng nhắm đến phần tử đó. Độ ưu tiên cao hơn sẽ ghi đè độ ưu tiên thấp hơn.
+## 1. Độ Ưu Tiên Trong CSS Là Gì?
+CSS Specificity (độ ưu tiên trong CSS) quyết định quy tắc CSS nào sẽ được áp dụng cho một phần tử khi có nhiều quy tắc khác nhau cùng tác động. 
 
-## 2. Cách tính Specificity
-Specificity được tính theo công thức:
-- **Inline Styles**: 1000
-- **ID selectors** (`#id`): 100
-- **Class, Attribute & Pseudo-classes** (`.class`, `[attribute]`, `:hover`): 10
-- **Element & Pseudo-elements** (`div`, `p`, `::before`): 1
-- **Universal Selector (`*`)** không có độ ưu tiên.
+## 2. Nguyên Tắc Tính Specificity
+Specificity được tính dựa trên loại selector sử dụng, theo công thức:
 
-## 3. Bảng Ví Dụ Tính Specificity
-| Selector                 | Specificity Value | Calculation         |
-|--------------------------|------------------|---------------------|
-| `p`                      | 1                | 1                   |
-| `p.test`                 | 11               | 1 + 10              |
-| `p#demo`                 | 101              | 1 + 100             |
-| `<p style="color: pink;">` | 1000             | 1000                |
-| `#demo`                  | 100              | 100                 |
-| `.test`                  | 10               | 10                  |
-| `p.test1.test2`          | 21               | 1 + 10 + 10         |
-| `#navbar p#demo`         | 201              | 100 + 1 + 100       |
-| `*`                      | 0                | 0                   |
+```
+inline styles > ID selectors > Class, attribute, pseudo-class selectors > Element selectors
+```
 
-## 4. Quy Tắc Khi Áp Dụng Specificity
-1. Nếu hai quy tắc có cùng độ ưu tiên, quy tắc nào xuất hiện sau sẽ được áp dụng.
-2. Inline styles luôn có độ ưu tiên cao nhất (1000).
-3. ID selector có độ ưu tiên cao hơn Class và Element.
-4. Class, Attributes và Pseudo-classes có độ ưu tiên cao hơn Element và Pseudo-elements.
-5. Universal selector (`*`) không ảnh hưởng đến độ ưu tiên.
+- **Inline styles** (`style=""` trong HTML) có độ ưu tiên cao nhất (1000 điểm).
+- **ID selectors** (`#id`) có độ ưu tiên tiếp theo (100 điểm).
+- **Class, attribute, pseudo-class selectors** (`.class`, `[attribute]`, `:hover`, `:nth-child`) có độ ưu tiên trung bình (10 điểm).
+- **Element selectors** (`div`, `p`, `h1`,...) có độ ưu tiên thấp nhất (1 điểm).
+- **Universal selector (`*`)** và các thuộc tính kế thừa từ phần tử cha có độ ưu tiên thấp nhất (0 điểm).
 
-## 5. Ví Dụ Cụ Thể
+## 3. Bảng Minh Họa Specificity
+
+| Selector | Specificity Value | Cách tính |
+|----------|------------------|-----------|
+| `p` | 1 | 1 |
+| `p.test` | 11 | 1 + 10 |
+| `p#demo` | 101 | 1 + 100 |
+| `#demo` | 100 | 100 |
+| `.test` | 10 | 10 |
+| `p.test1.test2` | 21 | 1 + 10 + 10 |
+| `#navbar p#demo` | 201 | 100 + 1 + 100 |
+| `*` | 0 | 0 (bị bỏ qua) |
+| `style="color: pink;"` | 1000 | 1000 (inline styles) |
+
+## 4. Ví Dụ Cụ Thể
+Giả sử có các quy tắc CSS sau:
 ```css
-/* Specificity: 1 */
-p {
+h1 {
   color: blue;
 }
 
-/* Specificity: 10 */
-.test {
-  color: red;
-}
-
-/* Specificity: 100 */
-#demo {
+h1.special {
   color: green;
 }
 
-/* Specificity: 1000 (Inline Style) */
-<p id="demo" class="test" style="color: pink;">Hello World</p>
+#title {
+  color: red;
+}
 ```
-**Kết quả:** Văn bản "Hello World" sẽ có màu hồng do inline style có specificity cao nhất.
+Và HTML:
+```html
+<h1 id="title" class="special">Tiêu đề</h1>
+```
+Màu chữ của tiêu đề sẽ là **đỏ** vì `#title` có specificity cao hơn `.special` và `h1`.
+
+## 5. Cách Giải Quyết Xung Đột Specificity
+- Sử dụng selectors cụ thể hơn khi cần.
+- Dùng `!important` để ghi đè quy tắc (nhưng tránh lạm dụng).
+- Sắp xếp quy tắc CSS hợp lý để tránh xung đột không mong muốn.
 
 ## 6. Kết Luận
-Hiểu rõ về specificity giúp bạn kiểm soát cách các quy tắc CSS áp dụng lên trang web một cách chính xác, tránh lỗi ghi đè không mong muốn. Hãy luôn kiểm tra độ ưu tiên khi viết CSS để đảm bảo trang web hiển thị đúng như mong đợi.
+Hiểu về specificity giúp bạn kiểm soát cách CSS áp dụng vào phần tử một cách chính xác, tránh xung đột không mong muốn trong thiết kế web.
 
