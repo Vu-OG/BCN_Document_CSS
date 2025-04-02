@@ -1,4 +1,5 @@
 **Author:** Nguyễn Minh Vũ
+
 # 🌟 **Các Phương Pháp Áp Dụng CSS Trong HTML** 🌟
 
 ## **Giới Thiệu**
@@ -9,12 +10,12 @@
 - Style nội tuyến cho phép bạn áp dụng CSS trực tiếp vào một phần tử HTML thông qua thuộc tính style.
 
 ### Cú Pháp:
-```
+```html
 <element style="property: value;">
 ```
 
 ### Ví Dụ:
-```
+```html
 <p style="color: red; font-size: 16px;">Đây là một đoạn văn bản màu đỏ.</p>
 ```
 
@@ -31,7 +32,7 @@
 - Bảng kiểu nội bộ được viết trong thẻ `<style>` trong phần `<head>` của tài liệu HTML. Nó áp dụng kiểu dáng cho toàn bộ tài liệu.
 
 ### Cú pháp:
-```
+```html
 <head>
   <style>
     element { 
@@ -42,7 +43,7 @@
 ```
 
 ### Ví dụ:
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,7 +74,7 @@
 
 ### Cú pháp:
 1. **Tạo file `style.css`**
-```
+```css
 p {
   color: green;
   font-size: 20px;
@@ -81,14 +82,14 @@ p {
 ```
 
 2. **Liên kết file CSS vào HTML**
-```
+```html
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 ```
 
 ### Ví dụ:
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
