@@ -25,7 +25,7 @@ BCN_DOCUMENT_CSS
     │    (Điều chỉnh hướng bố cục trong Flexbox)
     ├── 5.3 Flex Basis Trong CSS.md
     │    (Xác định kích thước ban đầu của flex items)
-    └── 5.4 Flex Grow Trong CSS.md
+    ├── 5.4 Flex Grow Trong CSS.md
     │    (Kiểm soát cách flex items mở rộng)
     └── 5.5 Flex Shrink Trong CSS.md
          (Kiểm soát cách flex items mở rộng)
