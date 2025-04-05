@@ -1,0 +1,108 @@
+**Author:** Nguyễn Minh Vũ
+
+# Flex Grow Trong CSS
+
+## 1. Giới Thiệu
+`flex-grow` là một thuộc tính trong CSS Flexbox, được sử dụng để quy định mức độ một phần tử con (flex item) có thể mở rộng để lấp đầy không gian trống trong flex container. Thuộc tính này đặc biệt hữu ích khi bạn muốn các phần tử con phân chia không gian còn lại một cách linh hoạt, thay vì giữ kích thước cố định.
+
+## 2. Cú Pháp Và Cách Sử Dụng Flex Grow
+Thuộc tính `flex-grow` được áp dụng cho các phần tử con bên trong một flex container (đã được kích hoạt bằng `display: flex;`). Cú pháp cơ bản như sau:
+```css
+.item {
+  flex-grow: value;
+}
+```
+### Giải thích:
+- `.item`: Selector xác định phần tử con (flex item) trong flex container.
+- `flex-grow`: Thuộc tính xác định khả năng mở rộng của phần tử.
+- `value`: Giá trị là một số không âm (thường là số nguyên như 0, 1, 2,...), biểu thị tỷ lệ mở rộng so với các phần tử khác.
+
+Ví dụ:
+```css
+.container {
+  display: flex;
+}
+.item1 {
+  flex-grow: 1;
+  background-color: lightblue;
+}
+.item2 {
+  flex-grow: 2;
+  background-color: lightgreen;
+}
+.item3 {
+  flex-grow: 1;
+  background-color: lightcoral;
+}
+```
+```html
+<div class="container">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
+```
+Trong ví dụ trên:
+- `item1` và `item3` có `flex-grow: 1`, mỗi phần tử chiếm 1 phần không gian trống.
+- `item2` có `flex-grow: 2`, chiếm 2 phần không gian trống, tức là gấp đôi `item1` và `item3`.
+- Tổng cộng có 4 phần (1 + 2 + 1), và không gian trống trong container sẽ được chia theo tỷ lệ này.
+
+### Cách Hoạt Động
+- Giá trị mặc định của `flex-grow` là `0`, nghĩa là phần tử không mở rộng để lấp đầy không gian trống.
+- Khi tất cả các flex items có `flex-grow` lớn hơn 0, không gian trống trong container sẽ được phân phối dựa trên tỷ lệ giá trị `flex-grow` của từng phần tử.
+- Nếu một phần tử có `flex-grow: 0`, nó sẽ giữ kích thước ban đầu và không mở rộng.
+
+Ví dụ với giá trị 0:
+```css
+.container {
+  display: flex;
+}
+.item1 {
+  flex-grow: 0;
+  width: 100px;
+  background-color: lightblue;
+}
+.item2 {
+  flex-grow: 1;
+  background-color: lightgreen;
+}
+```
+```html
+<div class="container">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+</div>
+```
+Ở đây, `item1` giữ nguyên chiều rộng 100px, trong khi `item2` mở rộng để chiếm toàn bộ không gian trống còn lại.
+
+## 3. Ứng Dụng Thực Tế Của Flex Grow
+`flex-grow` thường được sử dụng để:
+- Tạo các layout mà các phần tử tự động điều chỉnh kích thước để lấp đầy container.
+- Phân chia không gian theo tỷ lệ mong muốn, ví dụ như trong thiết kế giao diện với các cột có độ rộng khác nhau.
+- Xây dựng bố cục responsive mà không cần chỉ định kích thước cố định.
+
+Ví dụ thực tế - Thanh sidebar và nội dung chính:
+```css
+.container {
+  display: flex;
+  width: 100%;
+}
+.sidebar {
+  flex-grow: 1;
+  background-color: #f0f0f0;
+}
+.main {
+  flex-grow: 3;
+  background-color: #e0e0e0;
+}
+```
+```html
+<div class="container">
+  <div class="sidebar">Sidebar</div>
+  <div class="main">Main Content</div>
+</div>
+```
+Trong ví dụ này, `.main` chiếm 3/4 không gian trống, trong khi `.sidebar` chiếm 1/4, tạo ra một bố cục với tỷ lệ 1:3.
+
+## 4. Kết Luận
+`flex-grow` là một thuộc tính mạnh mẽ trong Flexbox, cho phép bạn kiểm soát cách các phần tử con mở rộng để tận dụng không gian trống trong container. Với khả năng phân phối không gian theo tỷ lệ, `flex-grow` giúp tạo ra các giao diện linh hoạt, dễ dàng thích nghi với nhiều kích thước màn hình, và là công cụ không thể thiếu trong thiết kế web hiện đại.
