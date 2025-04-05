@@ -19,12 +19,14 @@ BCN_DOCUMENT_CSS
 │        (Tìm hiểu khoảng cách bên ngoài phần tử)
 │ 
 └── 5. Bố Cục Web với Flexbox & Grid
-    ├── Display: Flex Trong CSS.md
+    ├── 5.1 Display: Flex Trong CSS.md
     │    (Giới thiệu Flexbox và cách kích hoạt)
-    ├── Flex Direction Trong CSS.md
+    ├── 5.2 Flex Direction Trong CSS.md
     │    (Điều chỉnh hướng bố cục trong Flexbox)
-    ├── Flex Basis Trong CSS.md
+    ├── 5.3 Flex Basis Trong CSS.md
     │    (Xác định kích thước ban đầu của flex items)
-    └── Flex Grow Trong CSS.md
+    └── 5.4 Flex Grow Trong CSS.md
+         (Kiểm soát cách flex items mở rộng)
+    └── 5.5 Flex Shrink Trong CSS.md
          (Kiểm soát cách flex items mở rộng)
 ```
