@@ -13,9 +13,9 @@ BCN_DOCUMENT_CSS
 │       (Nắm vững specificity và cách CSS ưu tiên áp dụng style)
 │ 
 ├── 4. Khoảng Cách (Spacing)
-│   ├── Padding Trong CSS.md
+│   ├── 4.1 Padding Trong CSS.md
 │   │    (Tìm hiểu khoảng cách bên trong phần tử)
-│   └── Margin Trong CSS.md
+│   └── 4.2 Margin Trong CSS.md
 │        (Tìm hiểu khoảng cách bên ngoài phần tử)
 │ 
 └── 5. Bố Cục Web với Flexbox & Grid
