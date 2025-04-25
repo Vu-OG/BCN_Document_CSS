@@ -1,4 +1,4 @@
-BCN_DOCUMENT_CSS
+```BCN_DOCUMENT_CSS
 ├── 1. Cú Pháp CSS Cơ Bản
 │   └── 1.1 Cú Pháp CSS Cơ Bản.md
 │       (Học cách viết CSS, selector, và cấu trúc cơ bản)
@@ -36,3 +36,4 @@ BCN_DOCUMENT_CSS
     │   (Kiểm soát cách flex items mở rộng)
     └── 6.5 Flex-Shrink Trong CSS.md
         (Kiểm soát cách flex items thu nhỏ)
+```
