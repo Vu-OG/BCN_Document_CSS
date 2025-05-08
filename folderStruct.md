@@ -18,22 +18,31 @@
 │   ├── 4.4 Height Trong CSS.md
 │   ├── 4.5 Min-Height Trong CSS.md
 │   └── 4.6 Max-Height Trong CSS.md
-
+│
 ├── 5. Khoảng Cách (Spacing)
 │   ├── 5.1 Padding Trong CSS.md
 │   │   (Tìm hiểu khoảng cách bên trong phần tử)
 │   └── 5.2 Margin Trong CSS.md
 │       (Tìm hiểu khoảng cách bên ngoài phần tử)
-
+│
 └── 6. Bố Cục Web (Flexbox & Grid)
-    ├── 6.1 Display: Flex Trong CSS.md
-    │   (Giới thiệu Flexbox và cách kích hoạt)
-    ├── 6.2 Flex-Direction Trong CSS.md
-    │   (Điều chỉnh hướng bố cục trong Flexbox)
-    ├── 6.3 Flex-Basis Trong CSS.md
-    │   (Xác định kích thước ban đầu của flex items)
-    ├── 6.4 Flex-Grow Trong CSS.md
-    │   (Kiểm soát cách flex items mở rộng)
-    └── 6.5 Flex-Shrink Trong CSS.md
-        (Kiểm soát cách flex items thu nhỏ)
+│   ├── 6.1 Display: Flex Trong CSS.md
+│   │   (Giới thiệu Flexbox và cách kích hoạt)
+│   ├── 6.2 Flex-Direction Trong CSS.md
+│   │   (Điều chỉnh hướng bố cục trong Flexbox)
+│   ├── 6.3 Flex-Basis Trong CSS.md
+│   │   (Xác định kích thước ban đầu của flex items)
+│   ├── 6.4 Flex-Grow Trong CSS.md
+│   │   (Kiểm soát cách flex items mở rộng)
+│   └── 6.5 Flex-Shrink Trong CSS.md
+│       (Kiểm soát cách flex items thu nhỏ)
+│
+└── 7. Nền (Background)
+    ├── 7.1 Màu Nền Phần Tử (Background-Color)
+    ├── 7.2 Hình Nền (Background-Image)
+    ├── 7.3 Vị Trí Hình Nền (Background-Position)
+    ├── 7.4 Lặp Hình Nền (Background-Repeat)
+    ├── 7.5 Kích Thước Hình Nền (Background-Size)
+    ├── 7.6 Thuộc Tính Cắt Hình Nền (Background-Clip)
+    └── 7.8 Thuộc Tính Lặp Hình Nền (Background-Attachment)
 ```
