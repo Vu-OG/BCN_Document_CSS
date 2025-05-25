@@ -1,5 +1,4 @@
-```
-Document Css BanCongNghe
+```Document Css BanCongNghe
 ├── 1. Cú Pháp CSS Cơ Bản
 │   └── 1.1 Cú Pháp CSS Cơ Bản.md
 │
@@ -60,25 +59,35 @@ Document Css BanCongNghe
 │   ├── 8.2 Làm Viền Cho SVG.md
 │   └── 8.3 Làm Đậm Nét Viền SVG.md
 │
-└── 9. Thuộc tính về Typography
-    ├── 9.1 Font-Family Trong CSS.md
-    ├── 9.2 Font-Smoothing Trong CSS.md
-    ├── 9.3 Font-Stretch Trong CSS.md
-    ├── 9.4 Font-Style Trong CSS.md
-    ├── 9.5 Font-Variant-Numeric Trong CSS.md
-    ├── 9.6 Font-Weight Trong CSS.md
-    ├── 9.8 Color – Tô Màu Chữ Với Sự Tinh Tế và Hiệu Quả.md
-    ├── 9.9 Letter-Spacing – Tạo Nhịp Thở Cho Văn Bản.md
-    ├── 9.10 Line-Clamp – Rút Gọn Văn Bản Dài.md
-    ├── 9.11 Line-Height – Làm Văn Bản Đệ Thở Hơn.md
-    ├── 9.12 List-Style-Image – Dùng Ảnh Thay Đầu Chấm Danh Sách.md
-    ├── 9.13 List-Style-Position – Vị Trí Đầu Dòng Trong Danh Sách.md
-    ├── 9.14 List-Style-Type – Kiểu Đầu Dòng Trong Danh Sách.md
-    ├── 9.15 Text-Align – Căn Chỉnh Văn Bản.md
-    ├── 9.16 Text-Decoration – Trang Trí Văn Bản.md
-    ├── 9.17 Text-Transform – Chuyển Đổi Kiểu Chữ.md
-    ├── 9.18 Text-Overflow – Xử Lý Văn Bản Tràn.md
-    ├── 9.19 Text-Wrap – Điều Chỉnh Ngắt Dòng Văn Bản.md
-    ├── 9.20 Text-Indent – Thụt Đầu Dòng Văn Bản.md
-    └── 9.21 Vertical-Align – Căn Chỉnh Dọc.md
+├── 9. Thuộc tính về Typography
+│   ├── 9.1 Font-Family Trong CSS.md
+│   ├── 9.2 Font-Smoothing Trong CSS.md
+│   ├── 9.3 Font-Stretch Trong CSS.md
+│   ├── 9.4 Font-Style Trong CSS.md
+│   ├── 9.5 Font-Variant-Numeric Trong CSS.md
+│   ├── 9.6 Font-Weight Trong CSS.md
+│   ├── 9.8 Color – Tô Màu Chữ Với Sự Tinh Tế và Hiệu Quả.md
+│   ├── 9.9 Letter-Spacing – Tạo Nhịp Thở Cho Văn Bản.md
+│   ├── 9.10 Line-Clamp – Rút Gọn Văn Bản Dài.md
+│   ├── 9.11 Line-Height – Làm Văn Bản Đệ Thở Hơn.md
+│   ├── 9.12 List-Style-Image – Dùng Ảnh Thay Đầu Chấm Danh Sách.md
+│   ├── 9.13 List-Style-Position – Vị Trí Đầu Dòng Trong Danh Sách.md
+│   ├── 9.14 List-Style-Type – Kiểu Đầu Dòng Trong Danh Sách.md
+│   ├── 9.15 Text-Align – Căn Chỉnh Văn Bản.md
+│   ├── 9.16 Text-Decoration – Trang Trí Văn Bản.md
+│   ├── 9.17 Text-Transform – Chuyển Đổi Kiểu Chữ.md
+│   ├── 9.18 Text-Overflow – Xử Lý Văn Bản Tràn.md
+│   ├── 9.19 Text-Wrap – Điều Chỉnh Ngắt Dòng Văn Bản.md
+│   ├── 9.20 Text-Indent – Thụt Đầu Dòng Văn Bản.md
+│   └── 9.21 Vertical-Align – Căn Chỉnh Dọc.md
+│
+└── 10. Interactivity – Tương Tác
+    ├── 10.1 Accent-Color – Tùy Chỉnh Màu Nổi Bật.md
+    ├── 10.2 Appearance – Tùy Chỉnh Giao Diện Phần Tử.md
+    ├── 10.3 Caret-Color – Màu Con Trỏ Nhập Liệu.md
+    ├── 10.4 Color-Scheme – Quản Lý Chủ Đề Màu Sắc.md
+    ├── 10.5 Cursor – Tùy Chỉnh Con Trỏ Chuột.md
+    ├── 10.6 Field-Sizing – Kiểm Soát Kích Thước Trường Nhập Liệu.md
+    ├── 10.7 Pointer-Events – Kiểm Soát Sự Kiện Con Trỏ.md
+    └── 10.8 Resize – Tùy Chỉnh Kích Thước Phần Tử.md
 ```
