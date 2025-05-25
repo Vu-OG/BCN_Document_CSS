@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 🌟**
+
+# 🌈 THUỘC TÍNH CSS: TEXT-INDENT 🌈
+
+## Text-Indent – Thụt Đầu Dòng Văn Bản
+
+---
+
+### 1. **Giới Thiệu**
+
+`text-indent` là thuộc tính CSS dùng để **thụt đầu dòng** của đoạn văn bản trong một phần tử khối. Nó thường được sử dụng để tạo khoảng cách cho dòng đầu tiên, giúp văn bản trông gọn gàng và dễ đọc hơn.
+
+---
+
+### 2. **Cú Pháp CSS**
+
+#### 📌 CSS Gốc:
+
+```css
+p {
+  text-indent: 2em; /* thụt đầu dòng 2em */
+}
+```
+
+#### Các giá trị phổ biến:
+- `<length>` (ví dụ: `20px`, `2em`): Khoảng cách thụt đầu dòng.
+- `<percentage>` (ví dụ: `10%`): Thụt đầu dòng dựa trên phần trăm chiều rộng vùng chứa.
+- `inherit`: Kế thừa từ phần tử cha.
+
+---
+
+### 3. **Ví Dụ Thực Tế**
+
+#### 🔹 Thụt đầu dòng 2em:
+
+```html
+<p style="text-indent: 2em;">
+  Đây là đoạn văn bản với dòng đầu tiên được thụt vào 2em.
+</p>
+```
+
+#### 🔹 Thụt đầu dòng bằng phần trăm:
+
+```html
+<p style="text-indent: 10%;">
+  Dòng đầu tiên của đoạn văn này được thụt 10% chiều rộng vùng chứa.
+</p>
+```
+
+---
+
+### 4. **Khi Nào Dùng `text-indent`?**
+
+- Khi cần định dạng đoạn văn theo kiểu sách báo, với dòng đầu tiên thụt vào.
+- Để tạo sự phân biệt rõ ràng giữa các đoạn văn bản.
+- Trong các thiết kế văn bản truyền thống hoặc trang trọng.
+
+---
+
+### 5. **Lỗi Thường Gặp**
+
+- Sử dụng giá trị âm (`text-indent: -20px`) có thể khiến văn bản bị đẩy ra ngoài vùng chứa.
+- Không hoạt động trên các phần tử inline, chỉ áp dụng cho phần tử khối.
+- Bị ghi đè bởi các thuộc tính khác hoặc không hiển thị đúng nếu vùng chứa quá hẹp.
+
+---
+
+### 6. **Lưu Ý Khi Dùng**
+
+- Chỉ áp dụng cho dòng đầu tiên của phần tử khối, không ảnh hưởng đến các dòng khác.
+- Kết hợp với `margin` hoặc `padding` để điều chỉnh bố cục tổng thể.
+- Kiểm tra tính hiển thị trên các thiết bị để đảm bảo thụt đầu dòng không làm mất nội dung.
+
+---
+
+### 7. **Kết Luận**
+
+`text-indent` là thuộc tính hữu ích để định dạng đoạn văn, tạo sự chuyên nghiệp và dễ đọc cho nội dung. Sử dụng hợp lý sẽ giúp giao diện văn bản trở nên tinh tế hơn.
+
+> 📝 Tóm lại:  
+> Sử dụng `text-indent` để tạo thụt đầu dòng, tăng tính thẩm mỹ và cấu trúc cho văn bản.
+
+---
+
+✍️ (◕‿◕)
