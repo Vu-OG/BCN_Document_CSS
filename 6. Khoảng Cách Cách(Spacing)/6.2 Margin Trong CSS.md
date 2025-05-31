@@ -1,0 +1,93 @@
+**Author:** Nguyễn Minh Vũ
+
+# Margin Trong CSS
+
+## 1. Giới Thiệu
+Trong CSS, `margin` là một thuộc tính quan trọng dùng để tạo khoảng cách bên ngoài giữa các phần tử HTML hoặc giữa phần tử và các thành phần xung quanh nó. Khác với `padding` (khoảng cách bên trong), `margin` giúp điều chỉnh vị trí và khoảng cách giữa các khối nội dung, góp phần tạo nên bố cục hài hòa và dễ nhìn cho trang web.
+
+## 2. Cú Pháp Và Cách Sử Dụng Margin
+Thuộc tính `margin` được định nghĩa trong CSS với cú pháp cơ bản như sau:
+```css
+tagname {
+  margin: value;
+}
+```
+### Giải thích:
+- `tagname`: Selector xác định phần tử HTML mà bạn muốn áp dụng `margin`.
+- `margin`: Thuộc tính xác định khoảng cách bên ngoài.
+- `value`: Giá trị của margin, có thể là `px`, `%`, `em`, `rem`, hoặc thậm chí là `auto`.
+
+Ví dụ:
+```css
+div {
+  margin: 20px;
+}
+```
+Quy tắc trên tạo khoảng cách 20px bên ngoài tất cả các cạnh của phần tử `<div>`.
+
+### Các Cách Ghi Margin:
+Margin có thể được khai báo với nhiều giá trị khác nhau tùy theo nhu cầu:
+- **Một giá trị**: Áp dụng đồng đều cho cả 4 cạnh (trên, phải, dưới, trái).
+  ```css
+  margin: 15px; /* 15px cho tất cả các cạnh */
+  ```
+- **Hai giá trị**: Giá trị đầu áp dụng cho trên/dưới, giá trị thứ hai cho trái/phải.
+  ```css
+  margin: 10px 20px; /* 10px trên/dưới, 20px trái/phải */
+  ```
+- **Ba giá trị**: Giá trị đầu cho trên, giá trị thứ hai cho trái/phải, giá trị thứ ba cho dưới.
+  ```css
+  margin: 10px 20px 30px; /* 10px trên, 20px trái/phải, 30px dưới */
+  ```
+- **Bốn giá trị**: Theo thứ tự trên, phải, dưới, trái (theo chiều kim đồng hồ).
+  ```css
+  margin: 10px 20px 30px 40px; /* 10px trên, 20px phải, 30px dưới, 40px trái */
+  ```
+
+Ngoài ra, bạn có thể sử dụng các thuộc tính riêng lẻ để điều chỉnh từng cạnh:
+- `margin-top`: Khoảng cách phía trên.
+- `margin-right`: Khoảng cách bên phải.
+- `margin-bottom`: Khoảng cách phía dưới.
+- `margin-left`: Khoảng cách bên trái.
+
+Ví dụ:
+```css
+p {
+  margin-top: 15px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+```
+
+### Giá Trị Đặc Biệt: `auto`
+Giá trị `auto` thường được dùng để căn giữa phần tử theo chiều ngang khi kết hợp với `width` cố định:
+```css
+div {
+  width: 50%;
+  margin: 0 auto;
+}
+```
+Quy tắc trên sẽ căn giữa phần tử `<div>` trong không gian cha của nó.
+
+## 3. Ứng Dụng Thực Tế Của Margin
+Margin thường được sử dụng để:
+- Tạo khoảng cách giữa các phần tử như đoạn văn, hình ảnh, hoặc các khối nội dung.
+- Điều chỉnh vị trí của phần tử trong bố cục.
+- Xử lý hiện tượng "margin collapse" (khi hai margin dọc liền kề gộp thành một giá trị lớn nhất).
+
+Ví dụ thực tế:
+```css
+.box {
+  margin: 20px;
+  background-color: lightgray;
+}
+```
+```html
+<div class="box">Khối nội dung 1</div>
+<div class="box">Khối nội dung 2</div>
+```
+Trong ví dụ trên, `margin: 20px` tạo khoảng cách 20px giữa hai khối `.box` và các thành phần xung quanh.
+
+## 4. Kết Luận
+`Margin` là một công cụ không thể thiếu trong CSS, giúp bạn kiểm soát khoảng cách bên ngoài các phần tử một cách linh hoạt. Việc sử dụng margin đúng cách không chỉ tạo ra bố cục rõ ràng mà còn nâng cao trải nghiệm người dùng bằng cách đảm bảo các thành phần trên trang web không bị chồng chéo hoặc quá sát nhau.

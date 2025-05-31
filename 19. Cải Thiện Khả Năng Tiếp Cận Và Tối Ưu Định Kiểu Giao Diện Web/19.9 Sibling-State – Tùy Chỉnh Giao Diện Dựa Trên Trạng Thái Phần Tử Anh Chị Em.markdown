@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Sibling-State – Tùy Chỉnh Giao Diện Dựa Trên Trạng Thái Phần Tử Anh Chị Em
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class như `~` (general sibling combinator) hoặc `+` (adjacent sibling combinator) trong CSS cho phép **định kiểu phần tử anh chị em** dựa trên trạng thái của một phần tử khác cùng cấp. Điều này hữu ích cho việc tạo các hiệu ứng tương tác giữa các phần tử anh chị em.
+
+> 🎨 Sibling combinators giống như người liên kết, thay đổi giao diện dựa trên trạng thái của anh chị em!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.sibling1:hover ~ .sibling2 {
+  background-color: #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp sibling combinators. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.sibling1:hover ~ .sibling2 {
+  @apply bg-blue-600;
+}
+```
+
+---
+
+### 3. **Đặc Điểm**
+
+- `~`: Áp dụng cho tất cả các phần tử anh chị em phía sau.
+- `+`: Áp dụng cho phần tử anh chị em ngay sau liền kề.
+
+> 🧠 Lưu ý: Chỉ áp dụng cho các phần tử cùng cấp trong cùng một cha.
+
+---
+
+### 4. **Khi Nào Dùng Sibling-State?**
+
+- Tùy chỉnh giao diện của phần tử dựa trên trạng thái của anh chị em (ví dụ: hover, focus).
+- Tạo hiệu ứng trong danh sách hoặc nhóm phần tử tương tác.
+- Tăng tính động cho giao diện mà không cần JavaScript.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng hover trên anh chị em:
+
+```html
+<div>
+  <div class="sibling1">Hover tôi</div>
+  <div class="sibling2">Tôi thay đổi</div>
+</div>
+
+<style>
+.sibling1:hover ~ .sibling2 {
+  background-color: #2563eb;
+  color: white;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div>
+  <div class="sibling1">Hover tôi</div>
+  <div class="sibling2">Tôi thay đổi</div>
+</div>
+
+<style>
+.sibling1:hover ~ .sibling2 {
+  @apply bg-blue-600 text-white;
+}
+</style>
+```

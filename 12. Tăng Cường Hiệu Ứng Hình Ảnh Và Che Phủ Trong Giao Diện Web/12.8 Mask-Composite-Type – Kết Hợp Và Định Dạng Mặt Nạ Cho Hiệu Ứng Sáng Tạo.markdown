@@ -1,0 +1,87 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Mask-Composite-Type – Kết Hợp Và Định Dạng Mặt Nạ Cho Hiệu Ứng Sáng Tạo
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `mask-composite` và `mask-type` trong CSS kiểm soát **cách kết hợp nhiều mặt nạ** và **loại mặt nạ** được sử dụng. `mask-composite` quyết định cách các lớp mặt nạ tương tác, còn `mask-type` xác định cách mặt nạ được diễn giải.
+
+> 🎨 `mask-composite` và `mask-type` giống như một nghệ sĩ, phối hợp nhiều lớp mặt nạ để tạo hiệu ứng độc đáo!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  mask-image: url('mask1.png'), url('mask2.png');
+  mask-composite: add;
+  mask-type: luminance;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `mask-composite` và `mask-type`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  mask-image: url('mask1.png'), url('mask2.png');
+  mask-composite: add;
+  mask-type: luminance;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `mask-composite`: `add`, `subtract`, `intersect`, `exclude`.
+- `mask-type`: `luminance` (dựa trên độ sáng), `alpha` (dựa trên độ trong suốt).
+
+> 🧠 Lưu ý: Hỗ trợ trình duyệt cho `mask-composite` có thể hạn chế.
+
+---
+
+### 4. **Khi Nào Dùng `mask-composite` và `mask-type`?**
+
+- Kết hợp nhiều mặt nạ để tạo hiệu ứng hình ảnh phức tạp.
+- Tùy chỉnh cách mặt nạ được diễn giải dựa trên độ sáng hoặc độ trong suốt.
+- Tăng tính sáng tạo cho các thiết kế hình ảnh hoặc giao diện.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Kết hợp hai mặt nạ:
+
+```html
+<div class="mask">Nội dung</div>
+
+<style>
+.mask {
+  background: blue;
+  mask-image: url('mask1.png'), url('mask2.png');
+  mask-composite: add;
+  mask-type: alpha;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="bg-blue-500 mask-composite">Nội dung</div>
+
+<style>
+.mask-composite {
+  mask-image: url('mask1.png'), url('mask2.png');
+  mask-composite: add;
+  mask-type: alpha;
+}
+</style>
+```

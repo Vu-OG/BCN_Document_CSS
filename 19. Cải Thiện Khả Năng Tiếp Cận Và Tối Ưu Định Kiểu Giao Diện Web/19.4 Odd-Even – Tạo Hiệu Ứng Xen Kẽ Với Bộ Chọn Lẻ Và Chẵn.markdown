@@ -1,0 +1,84 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Odd-Even – Tạo Hiệu Ứng Xen Kẽ Với Bộ Chọn Lẻ Và Chẵn
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:nth-child(odd)` và `:nth-child(even)` trong CSS cho phép **tạo kiểu xen kẽ** cho các phần tử con dựa trên vị trí lẻ hoặc chẵn. Chúng thường được dùng để tạo hiệu ứng trực quan cho danh sách hoặc bảng.
+
+> 🎨 `:nth-child(odd)` và `:nth-child(even)` giống như một họa sĩ, tô màu xen kẽ để làm nổi bật bố cục!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element:nth-child(odd) {
+  background-color: #f3f4f6;
+}
+.element:nth-child(even) {
+  background-color: #e5e7eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `odd:` và `even:`:
+
+```html
+<div class="odd:bg-gray-100 even:bg-gray-200"></div>
+```
+
+---
+
+### 3. **Đặc Điểm `:nth-child(odd)` và `:nth-child(even)`**
+
+- `:nth-child(odd)`: Áp dụng cho các phần tử ở vị trí lẻ (1, 3, 5...).
+- `:nth-child(even)`: Áp dụng cho các phần tử ở vị trí chẵn (2, 4, 6...).
+
+> 🧠 Lưu ý: Vị trí được tính từ 1, không phải 0.
+
+---
+
+### 4. **Khi Nào Dùng `:nth-child(odd)` và `:nth-child(even)`?**
+
+- Tạo hiệu ứng xen kẽ cho danh sách, bảng, hoặc hàng trong giao diện.
+- Tăng tính trực quan và dễ đọc cho dữ liệu dài.
+- Tùy chỉnh giao diện cho các mục lẻ/chẵn trong thiết kế responsive.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng xen kẽ cho bảng:
+
+```html
+<table>
+  <tr><td>Mục 1</td></tr>
+  <tr><td>Mục 2</td></tr>
+  <tr><td>Mục 3</td></tr>
+</table>
+
+<style>
+tr:nth-child(odd) {
+  background-color: #f3f4f6;
+}
+tr:nth-child(even) {
+  background-color: #e5e7eb;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<table>
+  <tr class="odd:bg-gray-100 even:bg-gray-200"><td>Mục 1</td></tr>
+  <tr><td>Mục 2</td></tr>
+  <tr><td>Mục 3</td></tr>
+</table>
+```

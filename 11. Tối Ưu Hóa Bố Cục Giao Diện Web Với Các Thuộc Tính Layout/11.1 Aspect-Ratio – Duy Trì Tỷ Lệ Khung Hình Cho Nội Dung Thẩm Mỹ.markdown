@@ -1,0 +1,74 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Aspect-Ratio – Duy Trì Tỷ Lệ Khung Hình Cho Nội Dung Thẩm Mỹ
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `aspect-ratio` trong CSS cho phép **duy trì tỷ lệ khung hình** (chiều rộng so với chiều cao) của một phần tử, đảm bảo nội dung như hình ảnh hoặc video hiển thị đúng tỷ lệ mà không bị méo mó. Điều này đặc biệt hữu ích khi thiết kế giao diện responsive.
+
+> 🎨 `aspect-ratio` giống như một khung ảnh, giúp giữ tỷ lệ hoàn hảo cho nội dung bất kể kích thước thay đổi!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  aspect-ratio: 16 / 9;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `aspect-`:
+
+```html
+<div class="aspect-w-16 aspect-h-9"></div>
+```
+
+---
+
+### 3. **Các Giá Trị `aspect-ratio`**
+
+- Tỷ lệ số: Ví dụ, `16 / 9`, `4 / 3`, `1 / 1` (vuông).
+- Số đơn: Ví dụ, `1` (tương đương `1 / 1`).
+- `auto`: Không áp dụng tỷ lệ cố định, dựa vào nội dung.
+
+> 🧠 Lưu ý: `aspect-ratio` thường được dùng với hình ảnh, video, hoặc container có kích thước động.
+
+---
+
+### 4. **Khi Nào Dùng `aspect-ratio`?**
+
+- Duy trì tỷ lệ khung hình cho hình ảnh hoặc video trong thiết kế responsive.
+- Đảm bảo nội dung không bị méo khi thay đổi kích thước màn hình.
+- Tạo các container có tỷ lệ cố định, như thumbnail hoặc banner.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Duy trì tỷ lệ 16:9 cho video:
+
+```html
+<video class="video" src="video.mp4"></video>
+
+<style>
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="aspect-w-16 aspect-h-9">
+  <img src="image.jpg" class="w-full h-full object-cover">
+</div>
+```

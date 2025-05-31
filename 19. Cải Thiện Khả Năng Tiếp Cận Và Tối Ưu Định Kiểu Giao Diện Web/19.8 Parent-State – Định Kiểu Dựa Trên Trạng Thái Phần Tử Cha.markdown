@@ -1,0 +1,77 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Parent-State – Định Kiểu Dựa Trên Trạng Thái Phần Tử Cha
+
+---
+
+### 1. **Giới Thiệu**
+
+CSS hiện tại không có pseudo-class trực tiếp để chọn phần tử con dựa trên trạng thái của phần tử cha, nhưng với `:has()` hoặc các bộ chọn trạng thái như `:hover`, bạn có thể **định kiểu phần tử con** dựa trên trạng thái của phần tử cha.
+
+> 🎨 Kỹ thuật này giống như một người điều phối, thay đổi giao diện con khi cha ở trạng thái đặc biệt!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.parent:hover .child {
+  background-color: #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ thông qua `group` và `group-hover:`:
+
+```html
+<div class="group">
+  <div class="group-hover:bg-blue-600">Con</div>
+</div>
+```
+
+---
+
+### 3. **Đặc Điểm**
+
+- Sử dụng `:hover`, `:focus`, hoặc `:has()` để thay đổi kiểu của phần tử con dựa trên trạng thái cha.
+- Kết hợp với `group` trong Tailwind để áp dụng trạng thái động.
+
+> 🧠 Lưu ý: `:has()` cần trình duyệt hiện đại để hoạt động.
+
+---
+
+### 4. **Khi Nào Dùng Parent-State?**
+
+- Tạo hiệu ứng tương tác khi phần tử cha được hover hoặc focus.
+- Tùy chỉnh giao diện con dựa trên trạng thái của cha, như menu con hoặc tooltip.
+- Tăng tính động cho giao diện mà không cần JavaScript.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng hover trên cha:
+
+```html
+<div class="parent">
+  <div class="child">Con</div>
+</div>
+
+<style>
+.parent:hover .child {
+  background-color: #2563eb;
+  color: white;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="group">
+  <div class="group-hover:bg-blue-600 group-hover:text-white">Con</div>
+</div>
+```

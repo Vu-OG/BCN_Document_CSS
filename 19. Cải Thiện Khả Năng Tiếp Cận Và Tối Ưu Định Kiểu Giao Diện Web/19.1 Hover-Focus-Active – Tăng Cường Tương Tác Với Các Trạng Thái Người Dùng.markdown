@@ -1,0 +1,88 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Hover-Focus-Active – Tăng Cường Tương Tác Với Các Trạng Thái Người Dùng
+
+---
+
+### 1. **Giới Thiệu**
+
+Các pseudo-class `:hover`, `:focus`, và `:active` trong CSS được sử dụng để **tăng cường tương tác** với người dùng bằng cách áp dụng kiểu dáng khi người dùng di chuột, tập trung, hoặc nhấn vào phần tử. Chúng giúp tạo trải nghiệm giao diện động và thân thiện.
+
+> 🎨 `:hover`, `:focus`, và `:active` giống như những người dẫn đường, phản hồi ngay lập tức với hành động của người dùng!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element:hover {
+  background-color: #2563eb;
+}
+.element:focus {
+  outline: 2px solid #2563eb;
+}
+.element:active {
+  background-color: #1e3a8a;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp các lớp tiện ích `hover:`, `focus:`, và `active:`:
+
+```html
+<button class="hover:bg-blue-600 focus:outline focus:outline-blue-600 active:bg-blue-800">Nút</button>
+```
+
+---
+
+### 3. **Các Pseudo-Class**
+
+- `:hover`: Áp dụng khi con trỏ chuột di chuyển qua phần tử.
+- `:focus`: Áp dụng khi phần tử nhận được tiêu điểm (ví dụ: click vào input).
+- `:active`: Áp dụng khi phần tử đang được nhấn (thường là chuột trái).
+
+> 🧠 Lưu ý: `:focus` thường được dùng cho các phần tử tương tác như input, button, hoặc link.
+
+---
+
+### 4. **Khi Nào Dùng `:hover`, `:focus`, `:active`?**
+
+- Tạo hiệu ứng tương tác khi người dùng di chuột qua nút, link, hoặc hình ảnh.
+- Cải thiện khả năng tiếp cận bằng cách cung cấp phản hồi rõ ràng khi tập trung vào phần tử.
+- Tăng tính trực quan cho các hành động nhấn, như nút hoặc menu.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng nút tương tác:
+
+```html
+<button class="btn">Nhấn tôi</button>
+
+<style>
+.btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+}
+.btn:hover {
+  background-color: #2563eb;
+}
+.btn:focus {
+  outline: 2px solid #1e40af;
+}
+.btn:active {
+  background-color: #1e3a8a;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<button class="bg-blue-500 text-white p-2 hover:bg-blue-600 focus:outline focus:outline-blue-700 active:bg-blue-800">Nhấn tôi</button>
+```

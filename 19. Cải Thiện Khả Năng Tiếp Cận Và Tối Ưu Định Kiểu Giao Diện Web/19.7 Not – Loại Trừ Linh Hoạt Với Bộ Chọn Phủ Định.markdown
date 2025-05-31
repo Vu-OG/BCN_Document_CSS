@@ -1,0 +1,82 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Not – Loại Trừ Linh Hoạt Với Bộ Chọn Phủ Định
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:not()` trong CSS cho phép **loại trừ các phần tử** không khớp với bộ chọn được chỉ định, giúp áp dụng kiểu cho các phần tử ngoại trừ một số trường hợp cụ thể.
+
+> 🎨 `:not()` giống như một bộ lọc, giữ lại những gì bạn muốn và loại bỏ những gì không cần!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element:not(.special) {
+  color: #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `not-` thông qua CSS tùy chỉnh:
+
+```css
+.element:not(.special) {
+  @apply text-blue-600;
+}
+```
+
+---
+
+### 3. **Đặc Điểm `:not()`**
+
+- Áp dụng kiểu cho các phần tử không khớp với bộ chọn trong `:not()`.
+- Có thể sử dụng với class, ID, thẻ, hoặc các bộ chọn khác.
+
+> 🧠 Lưu ý: `:not()` không hỗ trợ các bộ chọn phức tạp trong một số trình duyệt cũ.
+
+---
+
+### 4. **Khi Nào Dùng `:not()`?**
+
+- Loại trừ một số phần tử khỏi quy tắc kiểu chung.
+- Tùy chỉnh giao diện cho các phần tử không có class hoặc trạng thái cụ thể.
+- Tăng tính linh hoạt trong việc áp dụng kiểu.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Loại trừ phần tử đặc biệt:
+
+```html
+<div class="item">Mục 1</div>
+<div class="item special">Mục 2</div>
+<div class="item">Mục 3</div>
+
+<style>
+.item:not(.special) {
+  color: #2563eb;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="item">Mục 1</div>
+<div class="item special">Mục 2</div>
+<div class="item">Mục 3</div>
+
+<style>
+.item:not(.special) {
+  @apply text-blue-600;
+}
+</style>
+```

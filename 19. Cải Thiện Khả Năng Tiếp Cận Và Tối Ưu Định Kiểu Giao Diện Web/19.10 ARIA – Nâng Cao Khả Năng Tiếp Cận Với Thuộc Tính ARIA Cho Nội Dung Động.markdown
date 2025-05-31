@@ -1,0 +1,74 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## ARIA – Nâng Cao Khả Năng Tiếp Cận Với Thuộc Tính ARIA Cho Nội Dung Động
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính ARIA (Accessible Rich Internet Applications) trong HTML và CSS giúp **tăng khả năng tiếp cận** cho nội dung động, đặc biệt cho người dùng sử dụng công nghệ hỗ trợ như trình đọc màn hình. CSS có thể kết hợp với các thuộc tính ARIA để định kiểu dựa trên trạng thái.
+
+> 🎨 ARIA giống như một thông dịch viên, giúp giao diện dễ tiếp cận hơn với mọi người dùng!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+[aria-hidden="true"] {
+  display: none;
+}
+[aria-expanded="true"] {
+  background-color: #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ ARIA thông qua bộ chọn tùy chỉnh:
+
+```html
+<div aria-hidden="true" class="aria-hidden:true:hidden"></div>
+<div aria-expanded="true" class="aria-expanded:true:bg-blue-600"></div>
+```
+
+---
+
+### 3. **Đặc Điểm ARIA**
+
+- Sử dụng các thuộc tính như `aria-hidden`, `aria-expanded`, `aria-checked`, v.v.
+- Kết hợp với CSS để định kiểu dựa trên trạng thái ARIA.
+
+> 🧠 Lưu ý: ARIA không thay đổi giao diện, chỉ cung cấp ngữ nghĩa cho công nghệ hỗ trợ.
+
+---
+
+### 4. **Khi Nào Dùng ARIA?**
+
+- Tăng khả năng tiếp cận cho các thành phần động như modal, accordion, hoặc checkbox.
+- Định kiểu dựa trên trạng thái ARIA để cung cấp phản hồi trực quan.
+- Đảm bảo giao diện dễ sử dụng với trình đọc màn hình hoặc bàn phím.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Ẩn nội dung với ARIA:
+
+```html
+<div aria-hidden="true">Nội dung ẩn</div>
+
+<style>
+[aria-hidden="true"] {
+  display: none;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div aria-hidden="true" class="aria-hidden:true:hidden">Nội dung ẩn</div>
+```

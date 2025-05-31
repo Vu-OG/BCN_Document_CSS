@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Overflow-Overscroll – Quản Lý Nội Dung Tràn Và Hành Vi Cuộn
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `overflow` và `overscroll-behavior` trong CSS kiểm soát **cách xử lý nội dung tràn** ra ngoài container và **hành vi cuộn** của trình duyệt. `overflow` quyết định nội dung tràn được hiển thị hay ẩn, còn `overscroll-behavior` điều chỉnh hành vi khi cuộn đến giới hạn.
+
+> 🎨 `overflow` và `overscroll-behavior` giống như một người bảo vệ, kiểm soát nội dung và trải nghiệm cuộn!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `overflow-` và `overscroll-`:
+
+```html
+<div class="overflow-auto overscroll-contain"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `overflow`:
+  - `visible`: Nội dung tràn hiển thị ngoài container.
+  - `hidden`: Nội dung tràn bị ẩn.
+  - `auto`: Thêm thanh cuộn khi cần.
+  - `scroll`: Luôn hiển thị thanh cuộn.
+- `overscroll-behavior`:
+  - `auto`: Cho phép cuộn lan sang phần tử cha.
+  - `contain`: Ngăn cuộn lan sang phần tử cha.
+  - `none`: Ngăn mọi hành vi cuộn vượt quá giới hạn.
+
+> 🧠 Lưu ý: `overscroll-behavior` giúp cải thiện trải nghiệm trên thiết bị cảm ứng.
+
+---
+
+### 4. **Khi Nào Dùng `overflow` và `overscroll-behavior`?**
+
+- Quản lý nội dung dài trong container có kích thước cố định.
+- Tạo giao diện cuộn mượt mà trên thiết bị cảm ứng.
+- Ngăn hành vi cuộn không mong muốn trong các modal hoặc menu.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Container với thanh cuộn:
+
+```html
+<div class="container">
+  <p>Nội dung dài...</p>
+</div>
+
+<style>
+.container {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="w-72 h-48 overflow-auto overscroll-contain">
+  <p>Nội dung dài...</p>
+</div>
+```

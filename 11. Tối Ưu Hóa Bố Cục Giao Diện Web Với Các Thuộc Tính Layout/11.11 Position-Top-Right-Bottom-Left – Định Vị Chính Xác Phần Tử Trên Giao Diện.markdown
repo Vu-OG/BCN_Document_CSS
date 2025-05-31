@@ -1,0 +1,88 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Position-Top-Right-Bottom-Left – Định Vị Chính Xác Phần Tử Trên Giao Diện
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `position` cùng với `top`, `right`, `bottom`, và `left` trong CSS cho phép **định vị chính xác phần tử** trên giao diện, so với vị trí gốc hoặc phần tử cha. `position` quyết định cách phần tử được định vị, còn các thuộc tính kia xác định khoảng cách.
+
+> 🎨 `position` giống như một người vẽ bản đồ, giúp bạn đặt phần tử đúng chỗ trên giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `absolute`, `relative`, `fixed`, v.v.:
+
+```html
+<div class="absolute top-5 right-5"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `position`:
+  - `static`: Mặc định, không định vị đặc biệt.
+  - `relative`: Định vị so với vị trí ban đầu.
+  - `absolute`: Định vị so với phần tử cha có `position` không phải `static`.
+  - `fixed`: Định vị so với viewport.
+  - `sticky`: Kết hợp `relative` và `fixed`.
+- `top`, `right`, `bottom`, `left`:
+  - Giá trị số: Ví dụ, `20px`, `10%`.
+  - `auto`: Để trình duyệt tự tính toán.
+
+> 🧠 Lưu ý: `absolute` và `fixed` cần phần tử cha có `position: relative` để hoạt động chính xác.
+
+---
+
+### 4. **Khi Nào Dùng `position`?**
+
+- Định vị các phần tử như menu, nút, hoặc modal.
+- Tạo các hiệu ứng chồng chéo trong thiết kế.
+- Xây dựng giao diện cố định (như thanh điều hướng sticky).
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Định vị nút ở góc trên bên phải:
+
+```html
+<div class="container">
+  <button class="btn">Nút</button>
+</div>
+
+<style>
+.container {
+  position: relative;
+}
+.btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="relative">
+  <button class="absolute top-2 right-2">Nút</button>
+</div>
+```

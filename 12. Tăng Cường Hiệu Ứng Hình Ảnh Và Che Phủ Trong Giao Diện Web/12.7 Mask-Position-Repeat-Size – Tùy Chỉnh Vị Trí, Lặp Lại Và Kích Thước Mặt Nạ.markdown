@@ -1,0 +1,92 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Mask-Position-Repeat-Size – Tùy Chỉnh Vị Trí, Lặp Lại Và Kích Thước Mặt Nạ
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `mask-position`, `mask-repeat`, và `mask-size` trong CSS điều chỉnh **vị trí, cách lặp lại, và kích thước** của mặt nạ áp dụng cho phần tử. Chúng giúp bạn kiểm soát cách mặt nạ được hiển thị trên phần tử.
+
+> 🎨 `mask-position`, `mask-repeat`, và `mask-size` giống như công cụ căn chỉnh, giúp bạn đặt mặt nạ đúng vị trí và kích thước!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  mask-image: url('mask.png');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp các thuộc tính này. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  mask-image: url('mask.png');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `mask-position`: `center`, `top left`, `50% 50%`, v.v.
+- `mask-repeat`: `repeat`, `no-repeat`, `repeat-x`, `repeat-y`.
+- `mask-size`: `auto`, `cover`, `contain`, hoặc kích thước cụ thể như `50px`.
+
+> 🧠 Lưu ý: Tương tự như `background-position`, `background-repeat`, và `background-size`.
+
+---
+
+### 4. **Khi Nào Dùng `mask-position`, `mask-repeat`, và `mask-size`?**
+
+- Tùy chỉnh vị trí và kích thước mặt nạ để phù hợp với thiết kế.
+- Tạo hiệu ứng lặp lại mặt nạ cho các mẫu phức tạp.
+- Tăng tính sáng tạo cho hình ảnh hoặc nội dung với các mặt nạ tùy chỉnh.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Mặt nạ không lặp lại, căn giữa:
+
+```html
+<div class="mask">Nội dung</div>
+
+<style>
+.mask {
+  background: blue;
+  mask-image: url('mask.png');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="bg-blue-500 mask-center">Nội dung</div>
+
+<style>
+.mask-center {
+  mask-image: url('mask.png');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+</style>
+```

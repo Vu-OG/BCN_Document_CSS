@@ -1,0 +1,90 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## File – Nâng Cao Trải Nghiệm Tải Tệp Với Định Kiểu Tùy Biến
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::file-selector-button` trong CSS cho phép **tùy chỉnh nút chọn tệp** trong thẻ `<input type="file">`. Mặc định, nút này có giao diện đơn giản và khác nhau giữa các trình duyệt, nhưng với `::file-selector-button`, bạn có thể thay đổi màu sắc, kích thước, hoặc kiểu dáng để phù hợp với thiết kế.
+
+> 🎨 `::file-selector-button` giống như một công cụ giúp nút tải tệp trở nên đẹp mắt và đồng bộ với giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+input[type="file"]::file-selector-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa có lớp tiện ích trực tiếp cho `::file-selector-button`, nhưng bạn có thể sử dụng CSS tùy chỉnh:
+
+```css
+input[type="file"]::file-selector-button {
+  @apply bg-blue-600 text-white p-2 rounded;
+}
+```
+
+---
+
+### 3. **Các Thuộc Tính Áp Dụng**
+
+`::file-selector-button` hỗ trợ hầu hết các thuộc tính CSS như:
+
+- `background-color`, `color`: Đặt màu nền và chữ.
+- `padding`, `margin`: Điều chỉnh khoảng cách.
+- `border`, `border-radius`: Tạo viền và góc bo tròn.
+- `font-size`, `font-weight`: Định dạng văn bản.
+
+> 🧠 Lưu ý: Hỗ trợ trình duyệt có thể khác nhau. Kiểm tra kỹ trên các trình duyệt phổ biến như Chrome, Firefox, và Safari.
+
+---
+
+### 4. **Khi Nào Dùng `::file-selector-button`?**
+
+- Tùy chỉnh giao diện nút chọn tệp để phù hợp với thiết kế giao diện.
+- Tăng trải nghiệm người dùng bằng cách làm cho nút tải tệp trở nên trực quan và hấp dẫn.
+- Đảm bảo tính đồng nhất trong thiết kế biểu mẫu.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh nút chọn tệp:
+
+```html
+<input type="file" class="file-input">
+
+<style>
+.file-input::file-selector-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<input type="file" class="file-input">
+
+<style>
+.file-input::file-selector-button {
+  @apply bg-blue-600 text-white px-4 py-2 rounded cursor-pointer;
+}
+</style>
+```

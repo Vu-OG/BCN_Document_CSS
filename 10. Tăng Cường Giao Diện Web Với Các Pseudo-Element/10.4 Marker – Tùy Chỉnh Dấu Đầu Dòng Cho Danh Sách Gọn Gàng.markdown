@@ -1,0 +1,90 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Marker – Tùy Chỉnh Dấu Đầu Dòng Cho Danh Sách Gọn Gàng
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::marker` trong CSS cho phép **tùy chỉnh dấu đầu dòng** (bullet) hoặc số thứ tự trong các danh sách (`<ul>` hoặc `<ol>`). Điều này giúp bạn thay đổi màu sắc, kích thước, hoặc kiểu dáng của dấu đầu dòng mà không cần thêm phần tử HTML.
+
+> 🎨 `::marker` giống như một họa sĩ, giúp bạn vẽ lại các dấu đầu dòng để phù hợp với thiết kế!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+li::marker {
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind không hỗ trợ trực tiếp `::marker`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+li::marker {
+  @apply text-blue-600;
+}
+```
+
+---
+
+### 3. **Các Thuộc Tính Áp Dụng**
+
+`::marker` hỗ trợ các thuộc tính như:
+
+- `color`: Đặt màu của dấu đầu dòng.
+- `font-size`, `font-weight`: Điều chỉnh kích thước và độ đậm.
+- `content`: Tùy chỉnh nội dung dấu đầu dòng (ví dụ: ký tự đặc biệt).
+
+> 🧠 Lưu ý: Hỗ trợ trình duyệt có thể hạn chế với một số thuộc tính phức tạp. Chỉ nên dùng các thuộc tính cơ bản như màu sắc và kích thước.
+
+---
+
+### 4. **Khi Nào Dùng `::marker`?**
+
+- Tùy chỉnh dấu đầu dòng hoặc số thứ tự để phù hợp với giao diện.
+- Tạo danh sách có kiểu dáng đặc biệt mà không cần dùng hình ảnh hoặc HTML bổ sung.
+- Tăng tính thẩm mỹ cho các danh sách trong giao diện.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh dấu đầu dòng cho danh sách:
+
+```html
+<ul>
+  <li>Mục 1</li>
+  <li>Mục 2</li>
+</ul>
+
+<style>
+ul li::marker {
+  color: #2563eb;
+  font-size: 1.2rem;
+  content: "★";
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<ul class="list-disc">
+  <li>Mục 1</li>
+  <li>Mục 2</li>
+</ul>
+
+<style>
+ul li::marker {
+  @apply text-blue-600 text-lg;
+}
+</style>
+```

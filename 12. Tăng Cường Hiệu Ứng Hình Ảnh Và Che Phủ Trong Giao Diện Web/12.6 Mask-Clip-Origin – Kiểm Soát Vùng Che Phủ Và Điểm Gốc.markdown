@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Mask-Clip-Origin – Kiểm Soát Vùng Che Phủ Và Điểm Gốc
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `mask-clip` và `mask-origin` trong CSS kiểm soát **vùng áp dụng mặt nạ** và **điểm gốc** của mặt nạ. `mask-clip` xác định khu vực mặt nạ được áp dụng, còn `mask-origin` định vị điểm tham chiếu của mặt nạ.
+
+> 🎨 `mask-clip` và `mask-origin` giống như người thợ cắt may, đảm bảo mặt nạ được áp dụng đúng vị trí!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  mask-clip: border-box;
+  mask-origin: border-box;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `mask-clip` và `mask-origin`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  mask-clip: border-box;
+  mask-origin: border-box;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `mask-clip`: `border-box`, `padding-box`, `content-box`, `no-clip`.
+- `mask-origin`: `border-box`, `padding-box`, `content-box`.
+
+> 🧠 Lưu ý: Các giá trị này tương tự như `background-clip` và `background-origin`.
+
+---
+
+### 4. **Khi Nào Dùng `mask-clip` và `mask-origin`?**
+
+- Kiểm soát chính xác vùng áp dụng mặt nạ cho phần tử.
+- Tùy chỉnh hiệu ứng che phủ để phù hợp với viền, padding, hoặc nội dung.
+- Tạo các hiệu ứng hình ảnh phức tạp với mặt nạ.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Mặt nạ chỉ áp dụng cho nội dung:
+
+```html
+<div class="mask">Nội dung</div>
+
+<style>
+.mask {
+  background: blue;
+  mask-image: url('mask.png');
+  mask-clip: content-box;
+  mask-origin: content-box;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="bg-blue-500 mask-content">Nội dung</div>
+
+<style>
+.mask-content {
+  mask-image: url('mask.png');
+  mask-clip: content-box;
+  mask-origin: content-box;
+}
+</style>
+```

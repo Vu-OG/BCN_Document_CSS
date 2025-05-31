@@ -1,0 +1,83 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Selection – Tạo Hiệu Ứng Lựa Chọn Văn Bản Nổi Bật
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::selection` trong CSS cho phép **tùy chỉnh kiểu dáng của văn bản khi được chọn** (bôi đen) bởi người dùng. Điều này giúp thay đổi màu nền, màu chữ, hoặc thêm hiệu ứng cho phần văn bản được chọn, tạo trải nghiệm trực quan hơn.
+
+> 🎨 `::selection` giống như một công cụ trang điểm, làm nổi bật văn bản được chọn theo phong cách riêng của bạn!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+::selection {
+  background: #2563eb;
+  color: white;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind không có lớp tiện ích trực tiếp cho `::selection`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+::selection {
+  @apply bg-blue-600 text-white;
+}
+```
+
+---
+
+### 3. **Các Thuộc Tính Áp Dụng**
+
+`::selection` hỗ trợ các thuộc tính như:
+
+- `background`: Đặt màu nền cho văn bản được chọn.
+- `color`: Đặt màu chữ.
+- `text-shadow`: Thêm bóng chữ (hạn chế hỗ trợ trên một số trình duyệt).
+
+> 🧠 Lưu ý: Chỉ một số thuộc tính như `background`, `color`, và `text-shadow` được hỗ trợ. Tránh sử dụng các thuộc tính phức tạp như `border` hoặc `padding`.
+
+---
+
+### 4. **Khi Nào Dùng `::selection`?**
+
+- Tùy chỉnh giao diện khi người dùng chọn văn bản để phù hợp với thiết kế.
+- Tăng tính thẩm mỹ và nhận diện thương hiệu.
+- Tạo hiệu ứng nổi bật cho các trang web có phong cách sáng tạo.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh màu khi chọn văn bản:
+
+```html
+<p>Chọn văn bản này để xem hiệu ứng!</p>
+
+<style>
+p::selection {
+  background: #2563eb;
+  color: white;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<p class="text-gray-800">Chọn văn bản này để xem hiệu ứng!</p>
+
+<style>
+p::selection {
+  @apply bg-blue-600 text-white;
+}
+</style>
+```

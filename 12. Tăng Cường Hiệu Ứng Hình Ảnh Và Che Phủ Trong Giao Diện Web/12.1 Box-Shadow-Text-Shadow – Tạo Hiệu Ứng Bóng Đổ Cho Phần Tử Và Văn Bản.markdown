@@ -1,0 +1,80 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Box-Shadow-Text-Shadow – Tạo Hiệu Ứng Bóng Đổ Cho Phần Tử Và Văn Bản
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `box-shadow` và `text-shadow` trong CSS được sử dụng để **tạo hiệu ứng bóng đổ** cho phần tử hoặc văn bản, giúp tăng chiều sâu và tính thẩm mỹ cho giao diện. `box-shadow` áp dụng cho các phần tử khối, còn `text-shadow` áp dụng cho văn bản.
+
+> 🎨 `box-shadow` và `text-shadow` giống như ánh sáng trong thiết kế, tạo chiều sâu và điểm nhấn cho giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `shadow-` và `text-shadow-`:
+
+```html
+<div class="shadow-md"></div>
+<p class="text-shadow">Văn bản</p>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `box-shadow`:
+  - Cú pháp: `h-offset v-offset blur spread color`.
+  - Ví dụ: `2px 2px 4px 1px rgba(0, 0, 0, 0.3)` (ngang, dọc, mờ, lan rộng, màu).
+  - `inset`: Bóng đổ bên trong phần tử.
+- `text-shadow`:
+  - Cú pháp: `h-offset v-offset blur color`.
+  - Ví dụ: `1px 1px 2px rgba(0, 0, 0, 0.5)`.
+
+> 🧠 Lưu ý: `box-shadow` hỗ trợ nhiều bóng bằng cách liệt kê cách nhau bởi dấu phẩy.
+
+---
+
+### 4. **Khi Nào Dùng `box-shadow` và `text-shadow`?**
+
+- Tạo hiệu ứng nổi cho nút, thẻ, hoặc container.
+- Tăng tính thẩm mỹ cho văn bản tiêu đề hoặc nội dung đặc biệt.
+- Tạo giao diện 3D hoặc hiệu ứng ánh sáng trong thiết kế.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Bóng đổ cho nút:
+
+```html
+<button class="btn">Nút</button>
+
+<style>
+.btn {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<button class="shadow-md text-shadow">Nút</button>
+```

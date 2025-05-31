@@ -1,0 +1,87 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Backdrop – Tăng Cường Hiệu Ứng Nền Cho Các Thành Phần Giao Diện
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::backdrop` trong CSS được sử dụng để **tùy chỉnh nền của các phần tử toàn màn hình**, chẳng hạn như hộp thoại (`<dialog>`) hoặc các phần tử ở chế độ toàn màn hình. Nó cho phép bạn thêm hiệu ứng nền mờ, màu sắc, hoặc hình ảnh để tăng tính thẩm mỹ.
+
+> 🎨 `::backdrop` giống như một tấm rèm nền, giúp làm nổi bật các phần tử toàn màn hình với hiệu ứng đặc biệt!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind không hỗ trợ trực tiếp `::backdrop`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+dialog::backdrop {
+  @apply bg-black bg-opacity-50 backdrop-blur;
+}
+```
+
+---
+
+### 3. **Các Thuộc Tính Áp Dụng**
+
+`::backdrop` hỗ trợ các thuộc tính như:
+
+- `background`: Đặt màu nền hoặc hình ảnh.
+- `backdrop-filter`: Áp dụng hiệu ứng như làm mờ, độ tương phản, hoặc độ sáng.
+- `opacity`: Điều chỉnh độ trong suốt.
+
+> 🧠 Lưu ý: `::backdrop` chỉ hoạt động với các phần tử ở chế độ toàn màn hình hoặc hộp thoại. Hỗ trợ trình duyệt có thể hạn chế với `backdrop-filter`.
+
+---
+
+### 4. **Khi Nào Dùng `::backdrop`?**
+
+- Tạo hiệu ứng nền mờ cho hộp thoại hoặc modal.
+- Tăng tính thẩm mỹ khi hiển thị video hoặc nội dung toàn màn hình.
+- Tạo trải nghiệm người dùng tốt hơn với các hiệu ứng nền đặc biệt.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tạo nền mờ cho hộp thoại:
+
+```html
+<dialog open>
+  <p>Nội dung hộp thoại</p>
+</dialog>
+
+<style>
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<dialog open class="p-4">
+  <p>Nội dung hộp thoại</p>
+</dialog>
+
+<style>
+dialog::backdrop {
+  @apply bg-black bg-opacity-50 backdrop-blur-sm;
+}
+</style>
+```

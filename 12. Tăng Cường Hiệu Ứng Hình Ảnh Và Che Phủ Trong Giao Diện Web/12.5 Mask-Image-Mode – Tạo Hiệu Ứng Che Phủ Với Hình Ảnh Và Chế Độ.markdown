@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Mask-Image-Mode – Tạo Hiệu Ứng Che Phủ Với Hình Ảnh Và Chế Độ
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `mask-image` và `mask-mode` trong CSS cho phép **tạo hiệu ứng che phủ** bằng cách sử dụng hình ảnh hoặc gradient để kiểm soát phần hiển thị của phần tử. `mask-image` xác định hình ảnh mặt nạ, còn `mask-mode` định dạng cách mặt nạ hoạt động.
+
+> 🎨 `mask-image` giống như một tấm phim, chỉ cho phép hiển thị những phần bạn muốn!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  mask-image: url('mask.png');
+  mask-mode: alpha;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `mask-image` và `mask-mode`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  mask-image: url('mask.png');
+  mask-mode: alpha;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `mask-image`: `url()`, `linear-gradient()`, `radial-gradient()`, v.v.
+- `mask-mode`: `alpha` (dựa trên độ trong suốt), `luminance` (dựa trên độ sáng), `match-source` (tùy thuộc vào nguồn).
+
+> 🧠 Lưu ý: Hỗ trợ trình duyệt cho `mask-mode` có thể hạn chế.
+
+---
+
+### 4. **Khi Nào Dùng `mask-image` và `mask-mode`?**
+
+- Tạo hiệu ứng hình ảnh cắt xén theo hình dạng cụ thể.
+- Áp dụng gradient để làm mờ dần các phần tử.
+- Tăng tính sáng tạo cho các thiết kế hình ảnh hoặc giao diện.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Sử dụng mặt nạ gradient:
+
+```html
+<div class="mask">Nội dung</div>
+
+<style>
+.mask {
+  background: blue;
+  mask-image: linear-gradient(to right, black, transparent);
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="bg-blue-500 mask-gradient">Nội dung</div>
+
+<style>
+.mask-gradient {
+  mask-image: linear-gradient(to right, black, transparent);
+}
+</style>
+```

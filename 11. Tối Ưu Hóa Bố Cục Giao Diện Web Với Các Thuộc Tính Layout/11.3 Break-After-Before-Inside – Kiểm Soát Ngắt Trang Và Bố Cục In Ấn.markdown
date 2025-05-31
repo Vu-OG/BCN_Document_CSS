@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Break-After-Before-Inside – Kiểm Soát Ngắt Trang Và Bố Cục In Ấn
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `break-after`, `break-before`, và `break-inside` trong CSS kiểm soát **cách ngắt trang hoặc ngắt cột** trong bố cục in ấn hoặc đa cột. Chúng giúp đảm bảo nội dung được hiển thị hợp lý khi in hoặc trong các bố cục phức tạp.
+
+> 🎨 `break-*` giống như một người biên tập, giúp bạn kiểm soát nơi nội dung được ngắt để giữ bố cục đẹp mắt!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  break-after: page;
+  break-before: auto;
+  break-inside: avoid;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp các thuộc tính `break-*`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  @apply break-after-page break-inside-avoid;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `auto`: Để trình duyệt tự quyết định ngắt.
+- `avoid`: Tránh ngắt trang/cột tại vị trí phần tử.
+- `page`: Buộc ngắt trang sau/trước phần tử (`break-after`/`break-before`).
+- `column`: Buộc ngắt cột sau/trước phần tử.
+
+> 🧠 Lưu ý: Các thuộc tính này chủ yếu dùng trong in ấn hoặc bố cục đa cột.
+
+---
+
+### 4. **Khi Nào Dùng `break-*`?**
+
+- Kiểm soát bố cục khi in tài liệu, như báo cáo hoặc sách.
+- Tránh ngắt không mong muốn trong các danh sách hoặc bảng trong bố cục đa cột.
+- Đảm bảo các phần tử quan trọng (như tiêu đề) không bị chia cắt khi in.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Ngăn ngắt trong danh sách:
+
+```html
+<ul class="list">
+  <li>Mục 1</li>
+  <li>Mục 2</li>
+</ul>
+
+<style>
+.list {
+  columns: 2;
+}
+.list li {
+  break-inside: avoid;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<ul class="columns-2">
+  <li class="break-inside-avoid">Mục 1</li>
+  <li class="break-inside-avoid">Mục 2</li>
+</ul>
+```

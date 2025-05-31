@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Display – Điều Khiển Bố Cục Với Các Loại Hiển Thị Linh Hoạt
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `display` trong CSS kiểm soát **cách phần tử được hiển thị** và cách nó tương tác với các phần tử khác trong bố cục. Đây là một trong những thuộc tính cốt lõi để xây dựng bố cục giao diện.
+
+> 🎨 `display` giống như một đạo diễn, sắp xếp cách các phần tử xuất hiện trên sân khấu giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  display: flex;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `flex`, `grid`, `block`, v.v.:
+
+```html
+<div class="flex"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `block`: Hiển thị như phần tử khối, chiếm toàn bộ chiều rộng.
+- `inline`: Hiển thị như phần tử nội dòng, không ngắt dòng.
+- `inline-block`: Kết hợp đặc điểm của `block` và `inline`.
+- `flex`: Kích hoạt bố cục Flexbox.
+- `grid`: Kích hoạt bố cục Grid.
+- `none`: Ẩn phần tử.
+
+> 🧠 Lưu ý: `flex` và `grid` là các giá trị mạnh mẽ cho bố cục hiện đại.
+
+---
+
+### 4. **Khi Nào Dùng `display`?**
+
+- Xây dựng bố cục giao diện với Flexbox hoặc Grid.
+- Điều chỉnh cách các phần tử hiển thị (khối, nội dòng, hoặc ẩn).
+- Tạo các giao diện responsive bằng cách thay đổi `display` theo kích thước màn hình.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Sử dụng Flexbox:
+
+```html
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  gap: 10px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="flex gap-2">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+```

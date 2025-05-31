@@ -1,0 +1,74 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Box-Sizing – Quản Lý Kích Thước Phần Tử Một Cách Hiệu Quả
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `box-sizing` trong CSS xác định **cách tính toán kích thước** của một phần tử, bao gồm chiều rộng (`width`) và chiều cao (`height`). Nó quyết định liệu padding và border có được tính vào kích thước tổng hay không.
+
+> 🎨 `box-sizing` giống như một người quản lý, giúp bạn kiểm soát kích thước phần tử một cách chính xác!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  box-sizing: border-box;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `box-`:
+
+```html
+<div class="box-border"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `content-box`: Kích thước chỉ tính nội dung, không bao gồm padding và border.
+- `border-box`: Kích thước bao gồm nội dung, padding, và border.
+- `inherit`: Kế thừa từ phần tử cha.
+
+> 🧠 Lưu ý: `border-box` thường được dùng để đơn giản hóa tính toán kích thước.
+
+---
+
+### 4. **Khi Nào Dùng `box-sizing`?**
+
+- Đảm bảo kích thước phần tử dễ dự đoán trong thiết kế responsive.
+- Tránh lỗi bố cục do padding hoặc border làm tăng kích thước ngoài ý muốn.
+- Tăng tính nhất quán khi làm việc với các phần tử có padding hoặc border.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Sử dụng `border-box` để kiểm soát kích thước:
+
+```html
+<div class="box">Nội dung</div>
+
+<style>
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #2563eb;
+  box-sizing: border-box;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="box-border w-48 p-5 border-4 border-blue-600">Nội dung</div>
+```

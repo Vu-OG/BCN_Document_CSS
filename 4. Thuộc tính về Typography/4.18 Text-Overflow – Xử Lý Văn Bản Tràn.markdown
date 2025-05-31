@@ -1,0 +1,87 @@
+**Author: Nguyễn Minh Vũ 🌟**
+
+# 🌈 THUỘC TÍNH CSS: TEXT-OVERFLOW 🌈
+
+## Text-Overflow – Xử Lý Văn Bản Tràn
+
+---
+
+### 1. **Giới Thiệu**
+
+`text-overflow` là thuộc tính CSS dùng để xác định cách hiển thị **văn bản tràn** ra ngoài vùng chứa khi nó không thể hiển thị đầy đủ. Nó thường được dùng cùng với `overflow: hidden` và `white-space: nowrap` để kiểm soát nội dung tràn.
+
+---
+
+### 2. **Cú Pháp CSS**
+
+#### 📌 CSS Gốc:
+
+```css
+div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+```
+
+#### Các giá trị phổ biến:
+- `clip` (mặc định): Cắt bỏ phần văn bản tràn.
+- `ellipsis`: Hiển thị dấu ba chấm (...) để biểu thị văn bản bị cắt.
+- `inherit`: Kế thừa từ phần tử cha.
+
+---
+
+### 3. **Ví Dụ Thực Tế**
+
+#### 🔹 Hiển thị dấu ba chấm:
+
+```html
+<div style="width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+  Văn bản này quá dài để hiển thị trong vùng chứa giới hạn.
+</div>
+```
+
+#### 🔹 Cắt bỏ văn bản:
+
+```html
+<div style="width: 200px; white-space: nowrap; overflow: hidden; text-overflow: clip;">
+  Văn bản này sẽ bị cắt bỏ không thương tiếc.
+</div>
+```
+
+---
+
+### 4. **Khi Nào Dùng `text-overflow`?**
+
+- Khi cần hiển thị văn bản trong không gian giới hạn mà không muốn nó tràn ra ngoài.
+- Để tạo giao diện gọn gàng, ví dụ trong danh sách, bảng hoặc thẻ tiêu đề.
+- Khi muốn báo hiệu cho người dùng rằng văn bản bị cắt bằng dấu ba chấm.
+
+---
+
+### 5. **Lỗi Thường Gặp**
+
+- Quên đặt `overflow: hidden` hoặc `white-space: nowrap`, dẫn đến `text-overflow` không hoạt động.
+- Văn bản tràn không hiển thị đúng trên một số trình duyệt nếu vùng chứa không có kích thước cố định.
+- Sử dụng `ellipsis` với văn bản đa dòng (yêu cầu thêm thuộc tính khác như `-webkit-line-clamp`).
+
+---
+
+### 6. **Lưu Ý Khi Dùng**
+
+- Yêu cầu `overflow: hidden` và `white-space: nowrap` để `text-overflow` hoạt động.
+- Chỉ áp dụng cho các phần tử khối chứa văn bản inline hoặc inline-block.
+- Với văn bản đa dòng, cần sử dụng các thuộc tính bổ sung như `-webkit-line-clamp` trên các trình duyệt Webkit.
+
+---
+
+### 7. **Kết Luận**
+
+`text-overflow` là công cụ hữu ích để xử lý văn bản tràn, giúp giao diện trở nên gọn gàng và dễ đọc. Kết hợp đúng cách với các thuộc tính khác sẽ tạo ra trải nghiệm người dùng mượt mà.
+
+> 📝 Tóm lại:  
+> Sử dụng `text-overflow` để kiểm soát văn bản tràn, đặc biệt với dấu ba chấm để tăng tính thẩm mỹ.
+
+---
+
+✍️ (◕‿◕)

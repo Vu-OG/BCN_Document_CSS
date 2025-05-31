@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Required-Disabled – Tăng Cường Trải Nghiệm Form Với Bộ Chọn Trạng Thái
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:required` và `:disabled` trong CSS cho phép **tùy chỉnh giao diện** của các trường biểu mẫu bắt buộc hoặc bị vô hiệu hóa. Chúng giúp cải thiện trải nghiệm người dùng bằng cách cung cấp phản hồi trực quan về trạng thái của trường nhập liệu.
+
+> 🎨 `:required` và `:disabled` giống như biển báo, hướng dẫn người dùng về các trường cần nhập hoặc không thể chỉnh sửa!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+input:required {
+  border-color: #2563eb;
+}
+input:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `required:` và `disabled:`:
+
+```html
+<input required class="required:border-blue-600">
+<input disabled class="disabled:bg-gray-200 disabled:cursor-not-allowed">
+```
+
+---
+
+### 3. **Đặc Điểm `:required` và `:disabled`**
+
+- `:required`: Áp dụng cho các trường biểu mẫu có thuộc tính `required`.
+- `:disabled`: Áp dụng cho các trường biểu mẫu có thuộc tính `disabled`.
+
+> 🧠 Lưu ý: Các pseudo-class này thường dùng cho `<input>`, `<select>`, và `<textarea>`.
+
+---
+
+### 4. **Khi Nào Dùng `:required` và `:disabled`?**
+
+- Làm nổi bật các trường bắt buộc để hướng dẫn người dùng.
+- Cung cấp phản hồi trực quan cho các trường bị vô hiệu hóa.
+- Tăng khả năng tiếp cận và trải nghiệm người dùng trong biểu mẫu.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh trường bắt buộc và vô hiệu hóa:
+
+```html
+<input type="text" required>
+<input type="text" disabled>
+
+<style>
+input:required {
+  border: 2px solid #2563eb;
+}
+input:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<input type="text" required class="required:border-2 required:border-blue-600">
+<input type="text" disabled class="disabled:bg-gray-200 disabled:cursor-not-allowed">
+```

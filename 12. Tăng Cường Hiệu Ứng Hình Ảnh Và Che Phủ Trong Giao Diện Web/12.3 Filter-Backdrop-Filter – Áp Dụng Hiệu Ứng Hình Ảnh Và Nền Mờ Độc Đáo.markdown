@@ -1,0 +1,75 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Filter-Backdrop-Filter – Áp Dụng Hiệu Ứng Hình Ảnh Và Nền Mờ Độc Đáo
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `filter` và `backdrop-filter` trong CSS áp dụng **hiệu ứng hình ảnh** (như làm mờ, tăng sáng, hoặc đổi màu) cho phần tử hoặc nền phía sau. `filter` tác động lên toàn bộ phần tử, còn `backdrop-filter` chỉ ảnh hưởng đến nền.
+
+> 🎨 `filter` và `backdrop-filter` giống như bộ lọc ảnh, tạo hiệu ứng độc đáo cho giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  filter: blur(5px);
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `filter` và `backdrop-`:
+
+```html
+<div class="filter blur-md"></div>
+<div class="backdrop-blur-lg"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `filter`: `blur(px)`, `brightness(%)`, `contrast(%)`, `grayscale(%)`, `hue-rotate(deg)`, `invert(%)`, `saturate(%)`, `sepia(%)`.
+- `backdrop-filter`: Tương tự `filter`, nhưng chỉ áp dụng cho nền.
+
+> 🧠 Lưu ý: `backdrop-filter` cần hỗ trợ trình duyệt (không hoạt động trên tất cả các trình duyệt cũ).
+
+---
+
+### 4. **Khi Nào Dùng `filter` và `backdrop-filter`?**
+
+- Tạo hiệu ứng mờ nền cho modal hoặc menu.
+- Thay đổi màu sắc hoặc độ sáng của hình ảnh mà không cần chỉnh sửa ảnh.
+- Tăng tính thẩm mỹ cho các overlay hoặc giao diện hiện đại.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng mờ nền:
+
+```html
+<div class="backdrop">Nội dung</div>
+
+<style>
+.backdrop {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="bg-white bg-opacity-20 backdrop-blur-lg">Nội dung</div>
+```

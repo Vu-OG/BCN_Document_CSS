@@ -1,0 +1,72 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Keyboard Navigation – Đảm Bảo Tính Tương Tác Qua Bàn Phím Cho Mọi Người Dùng
+
+---
+
+### 1. **Giới Thiệu**
+
+**Keyboard navigation** là khả năng sử dụng bàn phím để điều hướng và tương tác với giao diện web, đảm bảo khả năng tiếp cận cho người dùng không sử dụng chuột. CSS kết hợp với HTML (như `tabindex`) và pseudo-class như `:focus` giúp tăng cường trải nghiệm này.
+
+> 🎨 Keyboard navigation giống như một con đường, đảm bảo mọi người dùng đều có thể di chuyển dễ dàng!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+[tabindex="0"]:focus {
+  outline: 2px solid #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `focus:` và thuộc tính `tabindex`:
+
+```html
+<div tabindex="0" class="focus:outline focus:outline-blue-600"></div>
+```
+
+---
+
+### 3. **Đặc Điểm Keyboard Navigation**
+
+- Sử dụng `tabindex` để xác định thứ tự tiêu điểm.
+- Kết hợp `:focus` hoặc `:focus-visible` để cung cấp phản hồi trực quan.
+- Đảm bảo mọi phần tử tương tác đều có thể truy cập bằng phím Tab.
+
+> 🧠 Lưu ý: Tránh sử dụng `outline: none` mà không cung cấp thay thế trực quan.
+
+---
+
+### 4. **Khi Nào Dùng Keyboard Navigation?**
+
+- Tăng khả năng tiếp cận cho người dùng bàn phím hoặc công nghệ hỗ trợ.
+- Cung cấp phản hồi trực quan rõ ràng khi điều hướng bằng phím Tab.
+- Đảm bảo mọi phần tử tương tác (nút, link, form) đều có thể truy cập.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh tiêu điểm bàn phím:
+
+```html
+<div tabindex="0" class="nav-item">Điều hướng</div>
+
+<style>
+.nav-item:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div tabindex="0" class="focus:outline focus:outline-blue-600 focus:outline-offset-2">Điều hướng</div>
+```

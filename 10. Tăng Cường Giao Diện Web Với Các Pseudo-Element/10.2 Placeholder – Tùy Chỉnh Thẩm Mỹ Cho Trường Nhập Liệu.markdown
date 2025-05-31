@@ -1,0 +1,80 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Placeholder – Tùy Chỉnh Thẩm Mỹ Cho Trường Nhập Liệu
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::placeholder` trong CSS cho phép **tùy chỉnh kiểu dáng của văn bản placeholder** trong các trường nhập liệu (`<input>` hoặc `<textarea>`). Đây là văn bản hiển thị khi trường nhập liệu trống, giúp gợi ý cho người dùng về nội dung cần nhập.
+
+`::placeholder` giúp bạn thay đổi màu sắc, phông chữ, kích thước, hoặc các hiệu ứng khác của văn bản placeholder để phù hợp với thiết kế giao diện.
+
+> 🎨 `::placeholder` giống như một nhà thiết kế nhỏ, giúp trường nhập liệu trông đẹp hơn và đồng bộ với giao diện!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `placeholder-` để định kiểu placeholder:
+
+```html
+<input class="placeholder-gray-500 placeholder-italic" placeholder="Nhập tên của bạn">
+```
+
+---
+
+### 3. **Các Thuộc Tính Áp Dụng**
+
+`::placeholder` hỗ trợ các thuộc tính như:
+
+- `color`: Đặt màu văn bản placeholder.
+- `font-size`, `font-style`, `font-weight`: Điều chỉnh phông chữ.
+- `opacity`: Điều chỉnh độ trong suốt.
+- `text-align`, `letter-spacing`: Căn chỉnh và khoảng cách chữ.
+
+> 🧠 Lưu ý: Không phải mọi thuộc tính CSS đều áp dụng được cho `::placeholder`. Chỉ những thuộc tính liên quan đến văn bản và màu sắc hoạt động tốt.
+
+---
+
+### 4. **Khi Nào Dùng `::placeholder`?**
+
+- Tùy chỉnh giao diện trường nhập liệu để đồng bộ với thiết kế tổng thể.
+- Tăng tính thẩm mỹ và rõ ràng cho văn bản gợi ý.
+- Tạo trải nghiệm người dùng tốt hơn bằng cách làm nổi bật placeholder trong các biểu mẫu.
+- Hỗ trợ các thiết kế tối giản hoặc có chủ đề màu sắc đặc biệt.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh placeholder với màu và kiểu chữ:
+
+```html
+<input type="text" placeholder="Nhập email của bạn" class="p-2 border">
+
+<style>
+input::placeholder {
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind để định kiểu placeholder:
+
+```html
+<input class="p-2 border placeholder-gray-500 placeholder-opacity-50 placeholder-italic" placeholder="Nhập số điện thoại">
+```

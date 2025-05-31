@@ -1,0 +1,87 @@
+**Author: Nguyễn Minh Vũ 🌟**
+
+# 🌈 THUỘC TÍNH CSS: TEXT-WRAP 🌈
+
+## Text-Wrap – Điều Chỉnh Ngắt Dòng Văn Bản
+
+---
+
+### 1. **Giới Thiệu**
+
+`text-wrap` (hoặc `white-space` trong một số trường hợp) là thuộc tính CSS dùng để kiểm soát cách **văn bản ngắt dòng** trong vùng chứa. Nó giúp điều chỉnh việc văn bản có tự động xuống dòng hay không, tùy thuộc vào thiết kế.
+
+---
+
+### 2. **Cú Pháp CSS**
+
+#### 📌 CSS Gốc:
+
+```css
+p {
+  text-wrap: wrap; /* tự động xuống dòng */
+}
+```
+
+#### Các giá trị phổ biến:
+- `wrap` (hoặc `normal`): Văn bản tự động xuống dòng theo kích thước vùng chứa.
+- `nowrap`: Ngăn văn bản xuống dòng, giữ nguyên một dòng.
+- `balance` (hỗ trợ giới hạn): Cân bằng số chữ trên các dòng để trông hài hòa hơn.
+- `pretty` (hỗ trợ giới hạn): Tối ưu hóa ngắt dòng để tránh "dòng mồ côi".
+- `inherit`: Kế thừa từ phần tử cha.
+
+---
+
+### 3. **Ví Dụ Thực Tế**
+
+#### 🔹 Tự động xuống dòng:
+
+```html
+<div style="width: 200px; text-wrap: wrap;">
+  Đây là văn bản dài sẽ tự động xuống dòng khi vượt quá chiều rộng vùng chứa.
+</div>
+```
+
+#### 🔹 Ngăn xuống dòng:
+
+```html
+<div style="width: 200px; text-wrap: nowrap;">
+  Văn bản này sẽ không xuống dòng dù vượt quá vùng chứa.
+</div>
+```
+
+---
+
+### 4. **Khi Nào Dùng `text-wrap`?**
+
+- Khi cần kiểm soát việc xuống dòng của văn bản trong vùng chứa giới hạn.
+- Để đảm bảo văn bản hiển thị gọn gàng trong các thiết kế như thẻ, bảng, hoặc cột.
+- Khi muốn tối ưu hóa giao diện văn bản trên các thiết bị khác nhau.
+
+---
+
+### 5. **Lỗi Thường Gặp**
+
+- Quên đặt chiều rộng vùng chứa, dẫn đến `text-wrap` không hoạt động như mong đợi.
+- Sử dụng `nowrap` nhưng không kết hợp với `text-overflow` để xử lý văn bản tràn.
+- Các giá trị như `balance` hoặc `pretty` không được hỗ trợ trên một số trình duyệt cũ.
+
+---
+
+### 6. **Lưu Ý Khi Dùng**
+
+- Kết hợp với `width` hoặc `max-width` để kiểm soát kích thước vùng chứa.
+- Sử dụng `text-wrap: nowrap` cùng `text-overflow` để xử lý văn bản tràn.
+- Kiểm tra tính tương thích trình duyệt khi dùng các giá trị mới như `balance` hoặc `pretty`.
+
+---
+
+### 7. **Kết Luận**
+
+`text-wrap` là thuộc tính quan trọng để kiểm soát cách văn bản hiển thị và ngắt dòng, giúp tạo giao diện linh hoạt và dễ đọc. Sử dụng hợp lý sẽ cải thiện trải nghiệm người dùng.
+
+> 📝 Tóm lại:  
+> Sử dụng `text-wrap` để điều chỉnh ngắt dòng văn bản, đảm bảo giao diện đẹp và phù hợp.
+
+---
+
+✍️ (◕‿◕)

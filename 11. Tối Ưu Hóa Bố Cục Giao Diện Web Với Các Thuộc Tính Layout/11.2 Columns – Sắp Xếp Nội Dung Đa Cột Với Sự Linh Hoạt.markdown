@@ -1,0 +1,77 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Columns – Sắp Xếp Nội Dung Đa Cột Với Sự Linh Hoạt
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `columns` trong CSS cho phép **sắp xếp nội dung thành nhiều cột**, giống như bố cục báo hoặc tạp chí. Nó kết hợp `column-count` và `column-width` để tạo ra bố cục đa cột linh hoạt.
+
+> 🎨 `columns` giống như một nhà xuất bản, giúp bạn sắp xếp văn bản thành các cột gọn gàng và dễ đọc!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  columns: 3 200px;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `columns-`:
+
+```html
+<div class="columns-3"></div>
+```
+
+---
+
+### 3. **Các Giá Trị `columns`**
+
+- `auto`: Tự động xác định số cột và chiều rộng dựa trên nội dung.
+- Số nguyên: Ví dụ, `3` (số cột cố định).
+- Kích thước: Ví dụ, `200px` (chiều rộng tối thiểu mỗi cột).
+- Kết hợp: Ví dụ, `3 200px` (3 cột, mỗi cột tối thiểu 200px).
+
+> 🧠 Lưu ý: `columns` là viết tắt của `column-count` và `column-width`.
+
+---
+
+### 4. **Khi Nào Dùng `columns`?**
+
+- Tạo bố cục đa cột cho văn bản dài, như bài viết hoặc danh sách.
+- Thiết kế giao diện giống báo hoặc tạp chí.
+- Tối ưu hóa không gian hiển thị trên màn hình lớn.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Bố cục văn bản 3 cột:
+
+```html
+<div class="text-content">
+  <p>Nội dung dài...</p>
+</div>
+
+<style>
+.text-content {
+  columns: 3 200px;
+  column-gap: 20px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="columns-3 gap-5">
+  <p>Nội dung dài...</p>
+</div>
+```

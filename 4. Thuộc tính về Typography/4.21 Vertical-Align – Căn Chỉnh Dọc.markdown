@@ -1,0 +1,91 @@
+**Author: Nguyễn Minh Vũ 🌟**
+
+# 🌈 THUỘC TÍNH CSS: VERTICAL-ALIGN 🌈
+
+## Vertical-Align – Căn Chỉnh Dọc
+
+---
+
+### 1. **Giới Thiệu**
+
+`vertical-align` là thuộc tính CSS dùng để **căn chỉnh dọc** các phần tử inline hoặc inline-block, như văn bản, hình ảnh, hoặc các phần tử trong bảng. Nó xác định vị trí dọc của phần tử so với đường cơ sở (baseline) hoặc phần tử cha.
+
+---
+
+### 2. **Cú Pháp CSS**
+
+#### 📌 CSS Gốc:
+
+```css
+img {
+  vertical-align: middle; /* căn giữa theo chiều dọc */
+}
+```
+
+#### Các giá trị phổ biến:
+- `baseline` (mặc định): Căn chỉnh theo đường cơ sở của văn bản.
+- `top`: Căn chỉnh với cạnh trên của phần tử cha.
+- `bottom`: Căn chỉnh với cạnh dưới của phần tử cha.
+- `middle`: Căn giữa theo chiều dọc.
+- `text-top`: Căn chỉnh với đỉnh văn bản của phần tử cha.
+- `text-bottom`: Căn chỉnh với đáy văn bản của phần tử cha.
+- `<length>` (ví dụ: `10px`): Dịch chuyển dọc theo khoảng cách cụ thể.
+- `<percentage>` (ví dụ: `50%`): Dịch chuyển theo phần trăm chiều cao dòng.
+- `inherit`: Kế thừa từ phần tử cha.
+
+---
+
+### 3. **Ví Dụ Thực Tế**
+
+#### 🔹 Căn giữa hình ảnh:
+
+```html
+<span style="line-height: 50px;">
+  Văn bản <img style="vertical-align: middle;" src="image.jpg" alt="Hình ảnh" height="20px"> căn giữa.
+</span>
+```
+
+#### 🔹 Căn chỉnh với đỉnh văn bản:
+
+```html
+<span>
+  Văn bản <img style="vertical-align: text-top;" src="image.jpg" alt="Hình ảnh" height="20px"> căn với đỉnh.
+</span>
+```
+
+---
+
+### 4. **Khi Nào Dùng `vertical-align`?**
+
+- Khi cần căn chỉnh dọc văn bản, hình ảnh, hoặc các phần tử inline trong một dòng.
+- Để căn chỉnh nội dung trong ô bảng (table cell).
+- Khi thiết kế giao diện yêu cầu sự chính xác về vị trí dọc của các phần tử nhỏ.
+
+---
+
+### 5. **Lỗi Thường Gặp**
+
+- Sử dụng `vertical-align` trên phần tử khối (block) không có hiệu quả, chỉ hoạt động với inline hoặc inline-block.
+- Không đặt `line-height` hoặc kích thước vùng chứa phù hợp, dẫn đến căn chỉnh không đúng.
+- Hiểu sai cách hoạt động của các giá trị như `middle` hoặc `baseline`.
+
+---
+
+### 6. **Lưu Ý Khi Dùng**
+
+- Chỉ áp dụng cho các phần tử inline, inline-block, hoặc trong bảng (table cell).
+- Kết hợp với `line-height` để kiểm soát khoảng cách dọc chính xác hơn.
+- Kiểm tra trên các trình duyệt để đảm bảo căn chỉnh đồng nhất.
+
+---
+
+### 7. **Kết Luận**
+
+`vertical-align` là thuộc tính mạnh mẽ để căn chỉnh dọc các phần tử inline hoặc trong bảng, giúp tạo ra giao diện chính xác và thẩm mỹ. Sử dụng đúng cách sẽ nâng cao chất lượng thiết kế.
+
+> 📝 Tóm lại:  
+> Sử dụng `vertical-align` để căn chỉnh dọc các phần tử inline, đảm bảo giao diện gọn gàng và chuyên nghiệp.
+
+---
+
+✍️ (◕‿◕)

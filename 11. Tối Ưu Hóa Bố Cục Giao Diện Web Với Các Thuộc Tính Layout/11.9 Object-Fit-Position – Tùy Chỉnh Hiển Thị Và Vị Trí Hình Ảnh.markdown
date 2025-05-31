@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Object-Fit-Position – Tùy Chỉnh Hiển Thị Và Vị Trí Hình Ảnh
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `object-fit` và `object-position` trong CSS kiểm soát **cách hiển thị và căn chỉnh hình ảnh hoặc video** trong một container. `object-fit` quyết định cách nội dung khớp với container, còn `object-position` điều chỉnh vị trí của nội dung.
+
+> 🎨 `object-fit` và `object-position` giống như một khung ảnh, giúp bạn điều chỉnh hình ảnh để hiển thị hoàn hảo!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  object-fit: cover;
+  object-position: center;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `object-`:
+
+```html
+<img class="object-cover object-center" src="image.jpg">
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `object-fit`:
+  - `fill`: Kéo giãn để lấp đầy container, có thể làm méo hình.
+  - `contain`: Giữ tỷ lệ, hiển thị toàn bộ nội dung.
+  - `cover`: Giữ tỷ lệ, lấp đầy container, có thể bị cắt.
+  - `none`: Giữ kích thước gốc, không điều chỉnh.
+  - `scale-down`: Chọn giữa `none` hoặc `contain`.
+- `object-position`:
+  - Tọa độ: Ví dụ, `50% 50%` (giữa).
+  - Vị trí: Ví dụ, `top`, `left`.
+
+> 🧠 Lưu ý: `object-fit` chỉ hoạt động khi phần tử có kích thước xác định.
+
+---
+
+### 4. **Khi Nào Dùng `object-fit` và `object-position`?**
+
+- Hiển thị hình ảnh hoặc video trong container với tỷ lệ cố định.
+- Tạo thumbnail hoặc banner responsive mà không làm méo nội dung.
+- Điều chỉnh vị trí hình ảnh trong các thiết kế phức tạp.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiển thị hình ảnh với `object-fit: cover`:
+
+```html
+<img class="image" src="image.jpg">
+
+<style>
+.image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<img class="w-72 h-48 object-cover object-center" src="image.jpg">
+```

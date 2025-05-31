@@ -1,0 +1,89 @@
+**Author: Nguyễn Minh Vũ 🌟**
+
+# 🌈 THUỘC TÍNH CSS: TEXT-TRANSFORM 🌈
+
+## Text-Transform – Chuyển Đổi Kiểu Chữ
+
+---
+
+### 1. **Giới Thiệu**
+
+`text-transform` là thuộc tính CSS dùng để thay đổi **kiểu chữ** của văn bản, như viết hoa, viết thường, hoặc viết hoa chữ cái đầu mỗi từ. Nó giúp chuẩn hóa định dạng văn bản mà không cần chỉnh sửa nội dung HTML.
+
+---
+
+### 2. **Cú Pháp CSS**
+
+#### 📌 CSS Gốc:
+
+```css
+p {
+  text-transform: uppercase; /* viết hoa toàn bộ */
+}
+```
+
+#### Các giá trị phổ biến:
+- `none` (mặc định): Giữ nguyên văn bản.
+- `uppercase`: Chuyển thành chữ hoa.
+- `lowercase`: Chuyển thành chữ thường.
+- `capitalize`: Viết hoa chữ cái đầu mỗi từ.
+- `inherit`: Kế thừa từ phần tử cha.
+
+---
+
+### 3. **Ví Dụ Thực Tế**
+
+#### 🔹 Viết hoa toàn bộ:
+
+```html
+<p style="text-transform: uppercase;">văn bản này sẽ thành chữ hoa</p>
+```
+
+#### 🔹 Viết hoa chữ cái đầu:
+
+```html
+<p style="text-transform: capitalize;">văn bản này sẽ được chuẩn hóa</p>
+```
+
+#### 🔹 Chuyển thành chữ thường:
+
+```html
+<p style="text-transform: lowercase;">VĂN BẢN NÀY SẼ THÀNH CHỮ THƯỜNG</p>
+```
+
+---
+
+### 4. **Khi Nào Dùng `text-transform`?**
+
+- Khi cần chuẩn hóa văn bản (ví dụ: tiêu đề, nhãn nút).
+- Để tạo sự đồng nhất trong cách hiển thị văn bản trên giao diện.
+- Tăng tính thẩm mỹ cho các đoạn văn hoặc tiêu đề mà không cần thay đổi mã HTML.
+
+---
+
+### 5. **Lỗi Thường Gặp**
+
+- Sử dụng `capitalize` nhưng không đạt hiệu quả mong muốn với các từ viết tắt hoặc tên riêng.
+- Thuộc tính bị ghi đè bởi CSS khác có độ ưu tiên cao hơn.
+- Không hoạt động trên các phần tử không chứa văn bản (ví dụ: hình ảnh).
+
+---
+
+### 6. **Lưu Ý Khi Dùng**
+
+- `capitalize` chỉ viết hoa chữ cái đầu tiên của mỗi từ, không sửa lỗi chính tả.
+- Kiểm tra tính tương thích với các ngôn ngữ không sử dụng bảng chữ cái Latin.
+- Sử dụng trên các thẻ inline hoặc block có chứa văn bản để đạt hiệu quả.
+
+---
+
+### 7. **Kết Luận**
+
+`text-transform` là một thuộc tính tiện lợi để điều chỉnh kiểu chữ, giúp nội dung trở nên đồng nhất và chuyên nghiệp. Sử dụng hợp lý sẽ nâng cao trải nghiệm người dùng.
+
+> 📝 Tóm lại:  
+> Sử dụng `text-transform` để chuẩn hóa định dạng chữ, tạo sự nhất quán và thẩm mỹ cho văn bản.
+
+---
+
+✍️ (◕‿◕)

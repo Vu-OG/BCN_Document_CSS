@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Visibility-Z-Index – Kiểm Soát Hiển Thị Và Thứ Tự Lớp Phần Tử
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `visibility` và `z-index` trong CSS kiểm soát **mức độ hiển thị** và **thứ tự lớp** của các phần tử trên giao diện. `visibility` quyết định phần tử có hiển thị hay không, còn `z-index` xác định thứ tự chồng chéo của các phần tử.
+
+> 🎨 `visibility` và `z-index` giống như người điều phối, quyết định phần tử nào được nhìn thấy và đứng trước!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  visibility: hidden;
+  z-index: 10;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `visible`, `invisible`, và `z-`:
+
+```html
+<div class="invisible z-10"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `visibility`:
+  - `visible`: Hiển thị phần tử.
+  - `hidden`: Ẩn phần tử nhưng vẫn chiếm không gian.
+  - `collapse`: Ẩn phần tử (chủ yếu cho bảng).
+- `z-index`:
+  - Số nguyên: Ví dụ, `10`, `100` (số lớn hơn nằm trên).
+  - `auto`: Không tạo ngữ cảnh xếp chồng riêng.
+
+> 🧠 Lưu ý: `z-index` chỉ hoạt động với phần tử có `position` không phải `static`.
+
+---
+
+### 4. **Khi Nào Dùng `visibility` và `z-index`?**
+
+- Ẩn/hiển thị phần tử mà không thay đổi bố cục (khác với `display: none`).
+- Sắp xếp thứ tự hiển thị cho các phần tử chồng chéo, như modal hoặc menu.
+- Tạo các hiệu ứng giao diện phức tạp với nhiều lớp.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Ẩn phần tử và đặt thứ tự lớp:
+
+```html
+<div class="modal">Modal</div>
+
+<style>
+.modal {
+  position: absolute;
+  z-index: 100;
+  visibility: hidden;
+}
+.modal.active {
+  visibility: visible;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="absolute z-100 invisible active:visible">Modal</div>
+```

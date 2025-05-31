@@ -1,0 +1,83 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Has – Định Kiểu Động Dựa Trên Quan Hệ Phần Tử Con
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:has()` trong CSS cho phép **định kiểu phần tử cha** dựa trên sự tồn tại của phần tử con hoặc trạng thái của chúng. Đây là một công cụ mạnh mẽ để tạo các kiểu động mà không cần JavaScript.
+
+> 🎨 `:has()` giống như một nhà thám tử, kiểm tra phần tử con để quyết định kiểu dáng của phần tử cha!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.parent:has(.child) {
+  background-color: #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `:has()`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.parent:has(.child) {
+  @apply bg-blue-600;
+}
+```
+
+---
+
+### 3. **Đặc Điểm `:has()`**
+
+- Áp dụng kiểu cho phần tử cha nếu phần tử con khớp với bộ chọn bên trong `:has()`.
+- Ví dụ: `.parent:has(.child)` áp dụng kiểu cho `.parent` nếu nó chứa `.child`.
+
+> 🧠 Lưu ý: `:has()` có hỗ trợ trình duyệt hạn chế (chủ yếu trên các trình duyệt hiện đại).
+
+---
+
+### 4. **Khi Nào Dùng `:has()`?**
+
+- Tùy chỉnh giao diện dựa trên sự tồn tại của phần tử con.
+- Tạo các quy tắc kiểu động mà không cần JavaScript.
+- Tăng tính linh hoạt trong thiết kế giao diện phức tạp.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh cha dựa trên con:
+
+```html
+<div class="parent">
+  <div class="child">Con</div>
+</div>
+
+<style>
+.parent:has(.child) {
+  background-color: #2563eb;
+  color: white;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="parent">
+  <div class="child">Con</div>
+</div>
+
+<style>
+.parent:has(.child) {
+  @apply bg-blue-600 text-white;
+}
+</style>
+```

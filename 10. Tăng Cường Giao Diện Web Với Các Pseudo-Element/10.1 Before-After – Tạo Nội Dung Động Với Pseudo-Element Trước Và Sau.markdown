@@ -1,0 +1,52 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Before-After – Tạo Nội Dung Động Với Pseudo-Element Trước Và Sau
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-element `::before` và `::after` trong CSS được sử dụng để **chèn nội dung động** trước hoặc sau nội dung của một phần tử mà không cần thay đổi cấu trúc HTML. Chúng đặc biệt hữu ích để thêm các yếu tố trang trí, biểu tượng, hoặc hiệu ứng mà không cần thêm thẻ HTML bổ sung.
+
+`::before` chèn nội dung trước nội dung chính của phần tử, còn `::after` chèn nội dung sau nó. Cả hai đều yêu cầu thuộc tính `content` để xác định nội dung được chèn.
+
+> 🎨 `::before` và `::after` giống như những trợ thủ vô hình, giúp bạn thêm nội dung hoặc hiệu ứng mà không làm rối cấu trúc HTML!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element::before {
+  content: "Trước: ";
+}
+.element::after {
+  content: " Sau.";
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind không có lớp tiện ích trực tiếp cho `::before` và `::after`. Tuy nhiên, bạn có thể sử dụng `@apply` trong CSS tùy chỉnh để áp dụng các kiểu:
+
+```css
+.element::before {
+  @apply text-blue-500 font-bold;
+  content: "Trước: ";
+}
+.element::after {
+  @apply text-red-500;
+  content: " Sau.";
+}
+```
+
+---
+
+### 3. **Các Giá Trị `content`**
+
+- `""` (chuỗi rỗng): Chèn một chuỗi rỗng, thường dùng để tạo hiệu ứng hình ảnh.
+- Chuỗi văn bản: Ví dụ, `"Trước: "` hoặc `"★"`.
+- `url()`: Chèn hình ảnh, ví dụ: `url('icon.png')`.
+- `attr()`: Lấy giá trị từ thuộc tính HTML, ví dụ: `content:

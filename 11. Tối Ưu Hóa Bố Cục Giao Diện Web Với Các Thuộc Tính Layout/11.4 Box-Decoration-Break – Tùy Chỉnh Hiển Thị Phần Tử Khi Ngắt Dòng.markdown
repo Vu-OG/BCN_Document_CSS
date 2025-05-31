@@ -1,0 +1,81 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Box-Decoration-Break – Tùy Chỉnh Hiển Thị Phần Tử Khi Ngắt Dòng
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `box-decoration-break` trong CSS kiểm soát **cách hiển thị các thuộc tính trang trí** (như viền, nền, bóng) khi phần tử bị ngắt dòng hoặc ngắt cột. Nó đảm bảo giao diện nhất quán trong các trường hợp ngắt dòng.
+
+> 🎨 `box-decoration-break` giống như một nhà thiết kế, đảm bảo phần tử vẫn đẹp dù bị chia nhỏ!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  box-decoration-break: clone;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `box-decoration-break`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  @apply box-decoration-clone;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `slice`: Các thuộc tính trang trí (như viền, nền) bị cắt tại điểm ngắt.
+- `clone`: Mỗi phần của phần tử ngắt giữ nguyên các thuộc tính trang trí.
+
+> 🧠 Lưu ý: `clone` thường được dùng để giữ giao diện nhất quán.
+
+---
+
+### 4. **Khi Nào Dùng `box-decoration-break`?**
+
+- Đảm bảo viền hoặc nền của phần tử inline không bị cắt khi ngắt dòng.
+- Tạo bố cục đa cột với các phần tử có giao diện đồng nhất.
+- Tăng tính thẩm mỹ cho văn bản hoặc phần tử trong bố cục phức tạp.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Giữ viền và nền khi ngắt dòng:
+
+```html
+<span class="highlight">Nội dung dài sẽ ngắt dòng</span>
+
+<style>
+.highlight {
+  background: #2563eb;
+  color: white;
+  padding: 4px;
+  box-decoration-break: clone;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<span class="bg-blue-600 text-white p-1 box-decoration-clone">Nội dung dài sẽ ngắt dòng</span>
+
+<style>
+.box-decoration-clone {
+  box-decoration-break: clone;
+}
+</style>
+```

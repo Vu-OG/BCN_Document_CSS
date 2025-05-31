@@ -1,0 +1,84 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Float-Clear – Sắp Xếp Phần Tử Nổi Và Quản Lý Luồng Bố Cục
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `float` và `clear` trong CSS được sử dụng để **sắp xếp phần tử nổi** (như hình ảnh hoặc khối nội dung) và kiểm soát luồng bố cục xung quanh chúng. `float` làm cho phần tử "nổi" sang trái hoặc phải, còn `clear` ngăn các phần tử khác bị ảnh hưởng bởi float.
+
+> 🎨 `float` và `clear` giống như người sắp xếp nội thất, giúp bạn đặt các phần tử đúng chỗ trong không gian!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  float: left;
+}
+.clearfix {
+  clear: both;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `float-` và `clear-`:
+
+```html
+<div class="float-left"></div>
+<div class="clear-both"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `float`:
+  - `left`: Phần tử nổi sang trái.
+  - `right`: Phần tử nổi sang phải.
+  - `none`: Không nổi.
+- `clear`:
+  - `left`: Xóa float bên trái.
+  - `right`: Xóa float bên phải.
+  - `both`: Xóa cả hai bên.
+
+> 🧠 Lưu ý: `float` ít được dùng trong bố cục hiện đại, thường được thay bằng Flexbox hoặc Grid.
+
+---
+
+### 4. **Khi Nào Dùng `float` và `clear`?**
+
+- Sắp xếp hình ảnh hoặc khối nội dung nổi bên cạnh văn bản.
+- Tạo bố cục kiểu truyền thống, như bài báo với hình ảnh nổi.
+- Kiểm soát luồng nội dung trong các thiết kế cũ hoặc không thể dùng Flexbox/Grid.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hình ảnh nổi bên trái:
+
+```html
+<img class="float-image" src="image.jpg">
+<p>Nội dung văn bản sẽ bao quanh hình ảnh.</p>
+
+<style>
+.float-image {
+  float: left;
+  margin-right: 10px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<img class="float-left mr-2" src="image.jpg">
+<p>Nội dung văn bản sẽ bao quanh hình ảnh.</p>
+<div class="clear-both"></div>
+```

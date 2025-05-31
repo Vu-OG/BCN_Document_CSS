@@ -1,0 +1,71 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Focus-Visible – Tăng Độ Rõ Ràng Cho Trạng Thái Tập Trung Hiển Thị
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:focus-visible` trong CSS áp dụng kiểu dáng khi phần tử **nhận tiêu điểm thông qua bàn phím** hoặc các phương pháp không dùng chuột, giúp cải thiện khả năng tiếp cận bằng cách cung cấp phản hồi rõ ràng cho người dùng bàn phím.
+
+> 🎨 `:focus-visible` giống như một đèn hiệu, chỉ sáng lên khi người dùng cần thấy rõ tiêu điểm!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element:focus-visible {
+  outline: 2px solid #2563eb;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `focus-visible:`:
+
+```html
+<button class="focus-visible:outline focus-visible:outline-blue-600">Nút</button>
+```
+
+---
+
+### 3. **Đặc Điểm `:focus-visible`**
+
+- Chỉ áp dụng khi phần tử được tập trung bằng bàn phím hoặc thiết bị hỗ trợ tiếp cận.
+- Không kích hoạt khi người dùng nhấp chuột (khác với `:focus`).
+
+> 🧠 Lưu ý: `:focus-visible` cải thiện trải nghiệm người dùng bàn phím và tránh làm phiền người dùng chuột.
+
+---
+
+### 4. **Khi Nào Dùng `:focus-visible`?**
+
+- Tăng khả năng tiếp cận cho người dùng sử dụng bàn phím hoặc thiết bị hỗ trợ.
+- Cung cấp phản hồi trực quan rõ ràng khi điều hướng bằng phím Tab.
+- Tùy chỉnh giao diện tiêu điểm mà không ảnh hưởng đến trải nghiệm chuột.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh tiêu điểm bàn phím:
+
+```html
+<button class="btn">Nhấn tôi</button>
+
+<style>
+.btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<button class="focus-visible:outline focus-visible:outline-blue-600 focus-visible:outline-offset-2">Nhấn tôi</button>
+```

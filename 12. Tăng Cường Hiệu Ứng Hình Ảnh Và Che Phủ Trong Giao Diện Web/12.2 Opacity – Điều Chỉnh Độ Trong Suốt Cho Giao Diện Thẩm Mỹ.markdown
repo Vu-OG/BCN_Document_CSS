@@ -1,0 +1,73 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Opacity – Điều Chỉnh Độ Trong Suốt Cho Giao Diện Thẩm Mỹ
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `opacity` trong CSS điều chỉnh **độ trong suốt** của một phần tử, từ hoàn toàn trong suốt (0) đến hoàn toàn hiển thị (1). Nó ảnh hưởng đến cả phần tử và nội dung bên trong, tạo hiệu ứng thẩm mỹ tinh tế.
+
+> 🎨 `opacity` giống như một lớp kính, điều chỉnh độ mờ để tạo sự tương phản hoặc hiệu ứng mờ ảo!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  opacity: 0.5;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind cung cấp lớp tiện ích `opacity-`:
+
+```html
+<div class="opacity-50"></div>
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- Số từ `0` đến `1`: `0` là trong suốt hoàn toàn, `1` là hiển thị hoàn toàn.
+- Ví dụ: `0.5` (50% trong suốt).
+
+> 🧠 Lưu ý: `opacity` ảnh hưởng đến toàn bộ phần tử, bao gồm cả nội dung con.
+
+---
+
+### 4. **Khi Nào Dùng `opacity`?**
+
+- Tạo hiệu ứng mờ cho hình ảnh, nút, hoặc nền.
+- Tăng tính thẩm mỹ trong các modal, overlay, hoặc hiệu ứng hover.
+- Tạo giao diện nhẹ nhàng hoặc làm mờ các phần tử không quan trọng.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Hiệu ứng mờ khi hover:
+
+```html
+<div class="box">Nội dung</div>
+
+<style>
+.box {
+  opacity: 0.7;
+}
+.box:hover {
+  opacity: 1;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<div class="opacity-70 hover:opacity-100">Nội dung</div>
+```

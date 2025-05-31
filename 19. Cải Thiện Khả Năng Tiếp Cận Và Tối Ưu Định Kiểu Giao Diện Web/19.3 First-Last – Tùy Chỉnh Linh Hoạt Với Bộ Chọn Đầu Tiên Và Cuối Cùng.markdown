@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## First-Last – Tùy Chỉnh Linh Hoạt Với Bộ Chọn Đầu Tiên Và Cuối Cùng
+
+---
+
+### 1. **Giới Thiệu**
+
+Pseudo-class `:first-child` và `:last-child` trong CSS cho phép **tùy chỉnh phần tử đầu tiên hoặc cuối cùng** trong danh sách các phần tử con của một phần tử cha. Chúng giúp tạo kiểu đặc biệt cho các phần tử ở vị trí đầu hoặc cuối.
+
+> 🎨 `:first-child` và `:last-child` giống như người đánh dấu, làm nổi bật các phần tử ở vị trí đặc biệt!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element:first-child {
+  background-color: #2563eb;
+}
+.element:last-child {
+  border-bottom: none;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind hỗ trợ `first:` và `last:`:
+
+```html
+<div class="first:bg-blue-600 last:border-b-0"></div>
+```
+
+---
+
+### 3. **Đặc Điểm `:first-child` và `:last-child`**
+
+- `:first-child`: Áp dụng cho phần tử đầu tiên trong danh sách con.
+- `:last-child`: Áp dụng cho phần tử cuối cùng trong danh sách con.
+
+> 🧠 Lưu ý: Chỉ áp dụng khi phần tử là con trực tiếp của phần tử cha.
+
+---
+
+### 4. **Khi Nào Dùng `:first-child` và `:last-child`?**
+
+- Tùy chỉnh giao diện cho mục đầu tiên hoặc cuối cùng trong danh sách, menu, hoặc bảng.
+- Loại bỏ viền hoặc khoảng cách không cần thiết ở phần tử cuối.
+- Tăng tính thẩm mỹ cho các danh sách hoặc bố cục có thứ tự.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Tùy chỉnh danh sách:
+
+```html
+<ul>
+  <li>Mục 1</li>
+  <li>Mục 2</li>
+  <li>Mục 3</li>
+</ul>
+
+<style>
+li:first-child {
+  background-color: #2563eb;
+  color: white;
+}
+li:last-child {
+  border-bottom: none;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind:
+
+```html
+<ul>
+  <li class="first:bg-blue-600 first:text-white last:border-b-0">Mục 1</li>
+  <li>Mục 2</li>
+  <li>Mục 3</li>
+</ul>
+```

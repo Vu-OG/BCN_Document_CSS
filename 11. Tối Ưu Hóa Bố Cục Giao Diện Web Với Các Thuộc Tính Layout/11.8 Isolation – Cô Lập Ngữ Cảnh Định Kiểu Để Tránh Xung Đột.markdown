@@ -1,0 +1,85 @@
+**Author: Nguyễn Minh Vũ 📘**
+
+## Isolation – Cô Lập Ngữ Cảnh Định Kiểu Để Tránh Xung Đột
+
+---
+
+### 1. **Giới Thiệu**
+
+Thuộc tính `isolation` trong CSS được sử dụng để **tạo một ngữ cảnh xếp chồng mới** (stacking context) cho phần tử, giúp cô lập các hiệu ứng như `z-index`, `mix-blend-mode`, hoặc `filter` để tránh xung đột với các phần tử khác.
+
+> 🎨 `isolation` giống như một bức tường, ngăn cách phần tử khỏi ảnh hưởng của các phần tử khác trong bố cục!
+
+---
+
+### 2. **Cú Pháp CSS và Tailwind**
+
+#### 📌 CSS Gốc:
+
+```css
+.element {
+  isolation: isolate;
+}
+```
+
+#### 📌 Tailwind CSS:
+
+Tailwind chưa hỗ trợ trực tiếp `isolation`. Bạn cần dùng CSS tùy chỉnh:
+
+```css
+.element {
+  @apply isolate;
+}
+```
+
+---
+
+### 3. **Các Giá Trị**
+
+- `auto`: Không tạo ngữ cảnh xếp chồng riêng.
+- `isolate`: Tạo một ngữ cảnh xếp chồng mới.
+
+> 🧠 Lưu ý: `isolation: isolate` thường được dùng khi làm việc với `z-index` hoặc hiệu ứng phức tạp.
+
+---
+
+### 4. **Khi Nào Dùng `isolation`?**
+
+- Ngăn xung đột khi sử dụng `z-index` trong các bố cục phức tạp.
+- Đảm bảo các hiệu ứng như `mix-blend-mode` hoặc `filter` chỉ áp dụng trong phạm vi phần tử.
+- Tăng tính kiểm soát trong các giao diện có nhiều lớp chồng chéo.
+
+---
+
+### 5. **Ví Dụ Thực Tế**
+
+#### 📋 Cô lập ngữ cảnh với `z-index`:
+
+```html
+<div class="parent">
+  <div class="child">Nội dung</div>
+</div>
+
+<style>
+.parent {
+  isolation: isolate;
+}
+.child {
+  z-index: 10;
+}
+</style>
+```
+
+#### 📋 Sử dụng Tailwind với CSS tùy chỉnh:
+
+```html
+<div class="isolate">
+  <div class="z-10">Nội dung</div>
+</div>
+
+<style>
+.isolate {
+  isolation: isolate;
+}
+</style>
+```
