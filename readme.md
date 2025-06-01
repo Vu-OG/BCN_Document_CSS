@@ -23,7 +23,7 @@ Dưới đây là danh sách các cụm thư mục chính, được sắp xếp 
 5. **[Kích Thước (Sizing)](./5.%20Kích%20Thước%20Phần%20Tử%20(Sizing))**  
    - Quản lý kích thước phần tử với `width`, `height`, và các thuộc tính liên quan.
 
-6. **[Khoảng Cách (Spacing)](./6.%20Khoảng%20Cách%20(Spacing))**  
+6. **[Khoảng Cách (Spacing)](./6.%20Khoảng%20Cách%20Cách(Spacing))**  
    - Điều chỉnh khoảng cách với `padding` và `margin`.
 
 7. **[Các Thuộc Tính Viền Trong CSS](./7.%20Các%20Thuộc%20Tính%20Viền%20Trong%20CSS)**  
