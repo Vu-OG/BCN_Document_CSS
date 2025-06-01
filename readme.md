@@ -20,7 +20,7 @@ Dưới đây là danh sách các cụm thư mục chính, được sắp xếp 
 4. **[Thuộc tính về Typography](./4.%20Thuộc%20tính%20về%20Typography)**  
    - Các thuộc tính định kiểu văn bản để tạo nội dung dễ đọc và thẩm mỹ.
 
-5. **[Kích Thước (Sizing)](./5.%20Kích%20Thước%20(Sizing))**  
+5. **[Kích Thước (Sizing)](./5.%20Kích%20Thước%20Phần%20Tử%20(Sizing))**  
    - Quản lý kích thước phần tử với `width`, `height`, và các thuộc tính liên quan.
 
 6. **[Khoảng Cách (Spacing)](./6.%20Khoảng%20Cách%20(Spacing))**  
