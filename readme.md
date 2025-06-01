@@ -14,7 +14,7 @@ Dưới đây là danh sách các cụm thư mục chính, được sắp xếp 
 2. **[CSS Styling Methods](./2.%20CSS%20Styling%20Methods%20in%20HTML/CSS%20Styling%20Methods%20in%20HTML.md)**  
    - Các phương pháp áp dụng CSS vào HTML.
 
-3. **[Tính Ưu Tiên (Specificity)](./3.%20Tính%20Ưu%20Tiên%20(Specificity))**  
+3. **[Tính Ưu Tiên (Specificity)](./3.%20Tính%20Toán%20Độ%20Ưu%20Tiên%20Trong%20CSS/Tính%20Toán%20Độ%20Ưu%20Tiên%20Trong%20CSS.md)**  
    - Hiểu cách tính độ ưu tiên trong CSS để tránh xung đột.
 
 4. **[Thuộc tính về Typography](./4.%20Thuộc%20tính%20về%20Typography)**  
