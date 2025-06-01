@@ -8,7 +8,7 @@ Chào mừng bạn đến với **CSS BanCongNghe**, bộ tài liệu học CSS 
 
 Dưới đây là danh sách các cụm thư mục chính, được sắp xếp theo trình tự học từ cơ bản đến nâng cao:
 
-1. **[Cú Pháp CSS Cơ Bản](./1.%20Cú%20Pháp%20CSS%20Cơ%20Bản)**  
+1. **[Cú Pháp CSS Cơ Bản](./1.%20Cú%20Pháp%20CSS%20Cơ%20Bản/Cú%20Pháp%20CSS%20Cơ%20Bản.md)**  
    - Giới thiệu cú pháp CSS cơ bản và cách áp dụng.
 
 2. **[CSS Styling Methods](./2.%20CSS%20Styling%20Methods)**  
