@@ -11,7 +11,7 @@ Dưới đây là danh sách các cụm thư mục chính, được sắp xếp 
 1. **[Cú Pháp CSS Cơ Bản](./1.%20Cú%20Pháp%20CSS%20Cơ%20Bản/Cú%20Pháp%20CSS%20Cơ%20Bản.md)**  
    - Giới thiệu cú pháp CSS cơ bản và cách áp dụng.
 
-2. **[CSS Styling Methods](./2.%20CSS%20Styling%20Methods)**  
+2. **[CSS Styling Methods](./2.%20CSS%20Styling%20Methods%20in%20HTML/CSS%20Styling%20Methods%20in%20HTML.md)**  
    - Các phương pháp áp dụng CSS vào HTML.
 
 3. **[Tính Ưu Tiên (Specificity)](./3.%20Tính%20Ưu%20Tiên%20(Specificity))**  
