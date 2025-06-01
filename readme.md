@@ -1,7 +1,5 @@
 # CSS BanCongNghe - Tài liệu học CSS toàn diện
 
-**Author: Nguyễn Minh Vũ 📘**
-
 Chào mừng bạn đến với **CSS BanCongNghe**, bộ tài liệu học CSS được thiết kế để giúp bạn nắm vững từ các khái niệm cơ bản đến các kỹ thuật nâng cao. Tài liệu được tổ chức theo trình tự học hợp lý, từ cú pháp cơ bản đến các hiệu ứng giao diện phức tạp, giúp bạn xây dựng giao diện web đẹp mắt và tối ưu.
 
 ## Cấu trúc thư mục
